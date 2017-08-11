@@ -1,0 +1,7 @@
+C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\bin\Debug\Model.dll
+C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\bin\Debug\Model.pdb
+C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\obj\Debug\Persistencia.pdb
