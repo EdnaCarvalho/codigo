@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Model
+namespace Model.Models
 {
     public class Endereco
     {
         #region Atributos
 
+        private int id;
         private string cidade;
         private string bairro;
         private string ruaAv;
@@ -20,6 +21,12 @@ namespace Model
 
         #region Propriedades
 
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public string Cidade
         {
             get { return cidade; }

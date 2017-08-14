@@ -3,18 +3,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-namespace Model {
+namespace Model.Models
+{
     public class Notificacao
     {
         #region Atributos
 
+        private int id;
         private string status;
         private string descricao;
         private Pedido pedido;
-                #endregion
+        #endregion
 
         #region Propriedades
 
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public string Status
         {
             get { return status; }
@@ -33,7 +41,7 @@ namespace Model {
             set { pedido = value; }
         }
 
-#endregion
+        #endregion
 
         #region Construtor
 

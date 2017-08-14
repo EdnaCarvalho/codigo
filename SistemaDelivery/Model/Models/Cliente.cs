@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Model
+namespace Model.Models
 {
     public class Cliente
     {
         #region Atributos
 
+
+        private int id;
         private string nome;
         private string email;
         private string telefone;
@@ -21,6 +23,11 @@ namespace Model
 
         #region Propriedades
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public string Nome
         {
             get { return nome; }
