@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Model{
+namespace Model.Models{
 
     public class Empresa {
 
-         #region Atributos
+        #region Atributos
 
+        private int id;
         private string nome;
         private string email;
         private string senha;
@@ -24,7 +25,14 @@ namespace Model{
 
         #region Propriedades
 
-                public string Nome
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+
+        public string Nome
                 {
                     get { return nome; }
                     set { nome = value; }
