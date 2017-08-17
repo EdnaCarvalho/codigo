@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -15,6 +16,7 @@ namespace Model.Models
         private Cliente cliente;
         private List<Produto> produtos;
         private DateTime dataRealizacao;
+        private DateTime dataFinalizacao;
         private string descricao;
         private Endereco enderecoEntrega;
         private List<Notificacao> notificacoes;
@@ -47,10 +49,22 @@ namespace Model.Models
             set { produtos = value; }
         }
 
+        [Range(typeof(DateTime), "1/1/2017", "31/12/2018")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
         public DateTime DataRealizacao
         {
             get { return dataRealizacao; }
             set { dataRealizacao = value; }
+        }
+
+        [Range(typeof(DateTime), "1/1/2017", "31/12/2018")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
+        public DateTime DataFinalizacao
+        {
+            get { return dataFinalizacao; }
+            set { dataFinalizacao = value; }
         }
 
         public string Descricao

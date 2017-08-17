@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
+
 namespace Model.Models
 {
     public class Produto
@@ -34,6 +36,10 @@ namespace Model.Models
             set { descricao = value; }
         }
 
+        [Required]
+        [Range(100, 1200)]
+        [Display(Name = "Preco por Unidade")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public double Preco
         {
             get { return preco; }

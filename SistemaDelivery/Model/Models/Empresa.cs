@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -33,58 +34,76 @@ namespace Model.Models{
 
 
         public string Nome
-                {
-                    get { return nome; }
-                    set { nome = value; }
-                }
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
 
-                public string Email
-                {
-                    get { return email; }
-                    set { email = value; }
-                }
+       
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
 
-                public string Senha
-                {
-                    get { return senha; }
-                    set { senha = value; }
-                }
+        [Required]
+        [StringLength(20, MinimumLength = 5)]
+        [DataType(DataType.Password)]
+        [RegularExpression(@"^[A-Za-z0-9_]$")]
+        public string Senha
+        {
+            get { return senha; }
+            set { senha = value; }
+        }
 
-                public Endereco Endereco
-                {
-                    get { return endereco; }
-                    set { endereco = value; }
-                }
+        [DataType(DataType.Password)]
+        [System.ComponentModel.DataAnnotations.Compare("senha")]
+        public string Confirmar_senha
+        {
+            get;
+            set;
+        }
 
-                public string Cnpj
-                {
-                    get { return cnpj; }
-                    set { cnpj = value; }
-                }
+        public Endereco Endereco
+        {
+            get { return endereco; }
+            set { endereco = value; }
+        }
 
-                public string NomeDono
-                {
-                    get { return nomeDono; }
-                    set { nomeDono = value; }
-                }
+        public string Cnpj
+        {
+            get { return cnpj; }
+            set { cnpj = value; }
+        }
 
-                public string Login
-                {
-                    get { return login; }
-                    set { login = value; }
-                }
+        [Required]
+        [StringLength(50, MinimumLength = 10)]
+        [Display(Name = "Nome Completo")]
+        public string NomeDono
+        {
+            get { return nomeDono; }
+            set { nomeDono = value; }
+        }
 
-                public List<Pedido> Pedidos
-                {
-                    get { return pedidos; }
-                    set { pedidos = value; }
-                }
+        [Required]
+        [StringLength(10, MinimumLength = 5)]
+        public string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
 
-                public List<Produto> Produtos
-                {
-                    get { return produtos; }
-                    set { produtos = value; }
-                }
+        public List<Pedido> Pedidos
+        {
+            get { return pedidos; }
+            set { pedidos = value; }
+        }
+
+        public List<Produto> Produtos
+        {
+            get { return produtos; }
+            set { produtos = value; }
+        }
 
         #endregion
 
