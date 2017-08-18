@@ -49,7 +49,7 @@ namespace Model.Models{
         [Required]
         [StringLength(20, MinimumLength = 5)]
         [DataType(DataType.Password)]
-        [RegularExpression(@"^[A-Za-z0-9_]$")]
+        [RegularExpression(@"^[A-Za-z0-9_]+$")]
         public string Senha
         {
             get { return senha; }

@@ -232,3 +232,5 @@ D:\codigo\SistemaDelivery\SistemaDelivery\bin\pt-br\System.Web.WebPages.Razor.re
 D:\codigo\SistemaDelivery\SistemaDelivery\obj\Debug\SistemaDelivery.csprojResolveAssemblyReference.cache
 D:\codigo\SistemaDelivery\SistemaDelivery\obj\Debug\SistemaDelivery.dll
 D:\codigo\SistemaDelivery\SistemaDelivery\obj\Debug\SistemaDelivery.pdb
+D:\codigo\SistemaDelivery\SistemaDelivery\bin\Persistencia.dll
+D:\codigo\SistemaDelivery\SistemaDelivery\bin\Persistencia.pdb

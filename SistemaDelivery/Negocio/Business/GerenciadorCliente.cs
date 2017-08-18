@@ -1,21 +1,46 @@
-namespace Business
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Model.Models;
+using Persistencia.Persistence;
+
+namespace Negocio.Business
 {
     public class GerenciadorCliente
     {
-        public void realizarPedido()
+
+        private RepositorioCliente persistencia;
+
+        public GerenciadorCliente()
         {
-            // TODO implement here
+            persistencia = new RepositorioCliente();
         }
 
-        public void visualisarHistorico()
+        public Cliente Adicionar(Cliente cliente)
         {
-            // TODO implement here
+            persistencia.Adicionar(cliente);
+            return cliente;
         }
 
-        public void atualizarDados()
+        public void Editar(Cliente cliente)
         {
-            // TODO implement here
+            persistencia.Editar(cliente);
         }
 
+        public void Remover(Cliente cliente)
+        {
+            persistencia.Remover(cliente);
+        }
+
+        public Cliente Obter(int? id)
+        {
+            return persistencia.Obter(e => e.Id == id);
+        }
+
+        public List<Cliente> ObterTodos()
+        {
+            return persistencia.ObterTodos();
+        }
     }
 }

@@ -1,31 +1,45 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model.Models;
+using Persistencia.Persistence;
 
-namespace Business {
+namespace Negocio.Business {
+
     public class GerenciadorEmpresa
     {
-        public void analisarPedido()
+        private RepositorioEmpresa persistencia;
+
+        public GerenciadorEmpresa()
         {
-            // TODO implement here
+            persistencia = new RepositorioEmpresa();
         }
 
-        /**
-         * 
-         */
-        public void visualisarHistorico()
+        public Empresa Adicionar(Empresa empresa)
         {
-            // TODO implement here
+            persistencia.Adicionar(empresa);
+            return empresa;
         }
 
-        /**
-         * 
-         */
-        public void atualizarDados()
+        public void Editar(Empresa empresa)
         {
-            // TODO implement here
+            persistencia.Editar(empresa);
+        }
+
+        public void Remover(Empresa empresa)
+        {
+            persistencia.Remover(empresa);
+        }
+
+        public Empresa Obter(int? id)
+        {
+            return persistencia.Obter(e => e.Id == id);
+        }
+
+        public List<Empresa> ObterTodos()
+        {
+            return persistencia.ObterTodos();
         }
     }
 }

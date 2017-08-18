@@ -22,7 +22,7 @@ namespace Model.Models
 
         #endregion
 
-        #region Propr iedades
+        #region Propriedades
 
         public int Id
         {

@@ -8,14 +8,15 @@ using Negocio.Business;
 
 namespace SistemaDelivery.Controllers
 {
-    public class EmpresaController : Controller
+    public class ClienteController : Controller
     {
-        private GerenciadorEmpresa gerenciador;
-
-        public EmpresaController ()
+        private GerenciadorCliente gerenciador;
+        
+        public ClienteController()
         {
-            gerenciador = new GerenciadorEmpresa();
+            gerenciador = new GerenciadorCliente();
         }
+
         public ActionResult Index()
         {
             return View(gerenciador.ObterTodos());
@@ -25,85 +26,91 @@ namespace SistemaDelivery.Controllers
         {
             if (id.HasValue)
             {
-                Empresa empresa = gerenciador.Obter(id);
-                if(empresa != null)
-                    return View(empresa);
+                Cliente cliente = gerenciador.Obter(id);
+                if (cliente != null)
+                    return View(cliente);
             }
             return RedirectToAction("Index");
         }
 
+       
         public ActionResult Create()
         {
             return View();
         }
 
+        
         [HttpPost]
-        public ActionResult Create(Empresa empresa)
+        public ActionResult Create(Cliente cliente)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    gerenciador.Adicionar(empresa);
+                    gerenciador.Adicionar(cliente);
                     return RedirectToAction("Index");
                 }
             }
             catch
             {
-                
+
             }
-            return View();
+                return View();
+            
         }
 
+       
         public ActionResult Edit(int? id)
         {
             if (id.HasValue)
             {
-                Empresa empresa = gerenciador.Obter(id);
-                if (empresa != null)
-                    return View(empresa);
+                Cliente cliente = gerenciador.Obter(id);
+                if (cliente != null)
+                    return View(cliente);
             }
             return RedirectToAction("Index");
         }
 
+        // POST: Cliente/Edit/5
         [HttpPost]
-        public ActionResult Edit(int? id, Empresa empresa)
+        public ActionResult Edit(int id, Cliente cliente)
         {
             try
             {
-                gerenciador.Editar(empresa);  
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-               
-            }
-            return View();
-        }
-
-        public ActionResult Delete(int? id)
-        {
-
-            if (id.HasValue)
-            {
-                Empresa empresa = gerenciador.Obter(id);
-                if (empresa != null)
-                    return View(empresa);
-            }
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        public ActionResult Delete(int id, Empresa empresa)
-        {
-            try
-            {
-                gerenciador.Remover(empresa);
-                return RedirectToAction("Index");
+                    gerenciador.Editar(cliente);
+                    return RedirectToAction("Index");
             }
             catch
             {
                 
+            }
+            return View();
+        }
+
+        // GET: Cliente/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id.HasValue)
+            {
+                Cliente cliente = gerenciador.Obter(id);
+                if (cliente != null)
+                    return View(cliente);
+            }
+            return RedirectToAction("Index");
+        }
+
+        // POST: Cliente/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, Cliente cliente)
+        {
+            try
+            {
+                    gerenciador.Remover(cliente);
+                    return RedirectToAction("Index");
+            }
+            catch
+            {
+               
             }
             return View();
         }
