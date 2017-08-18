@@ -60,15 +60,7 @@ namespace Model.Models
             get { return senha; }
             set { senha = value; }
         }
-
-
-        [DataType(DataType.Password)]
-        [System.ComponentModel.DataAnnotations.Compare("senha")]
-        public string Confirmar_senha
-        {
-            get;
-            set;
-        }
+        
 
         private Endereco Endereco
         {
