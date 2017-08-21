@@ -17,8 +17,10 @@ namespace Model.Models{
         private string senha;
         private Endereco endereco;
         private string cnpj;
-        private string nomeDono;
+        private string cpf;
+        private string proprietario;
         private string login;
+        private string status;
         private List<Pedido> pedidos;
         private List<Produto> produtos;
 
@@ -39,7 +41,17 @@ namespace Model.Models{
             set { nome = value; }
         }
 
-       
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+
+        public string Cpf
+        {
+            get { return cpf; }
+            set { cpf = value; }
+        }
         public string Email
         {
             get { return email; }
@@ -71,10 +83,10 @@ namespace Model.Models{
         [Required]
         [StringLength(50, MinimumLength = 10)]
         [Display(Name = "Nome Completo")]
-        public string NomeDono
+        public string Proprietario
         {
-            get { return nomeDono; }
-            set { nomeDono = value; }
+            get { return proprietario; }
+            set { proprietario = value; }
         }
 
         [Required]
@@ -108,7 +120,9 @@ namespace Model.Models{
             Senha = null;
             Endereco = null;
             Cnpj = null;
-            NomeDono = null;
+            Proprietario = null;
+            Status = null;
+            Cpf = null;
             Login = null;
             Pedidos = new List<Pedido>();
             Produtos = new List<Produto>();

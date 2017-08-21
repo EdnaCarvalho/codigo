@@ -13,11 +13,10 @@ namespace Model.Models
         #region Atributos
 
         private int id;
-        private string Nome;
-        private string descricao;
         private double preco;
         private int quantidade;
         private Empresa empresa;
+        private TipoProduto tipo;
 
         #endregion
 
@@ -30,12 +29,7 @@ namespace Model.Models
             get { return id; }
             set { id = value; }
         }
-        public string Descricao
-        {
-            get { return descricao; }
-            set { descricao = value; }
-        }
-
+        
         [Required]
         [Range(100, 1200)]
         [Display(Name = "Preco por Unidade")]
@@ -57,7 +51,11 @@ namespace Model.Models
             get { return empresa; }
             set { empresa = value; }
         }
-
+        public TipoProduto Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
 
 
         #endregion
@@ -69,8 +67,6 @@ namespace Model.Models
             Empresa = null;
             Quantidade = 0;
             Preco = 0.0;
-            Descricao = null;
-            Nome = null;
         }
         #endregion
     }

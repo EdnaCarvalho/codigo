@@ -10,23 +10,17 @@ namespace Model.Models
     {
         #region Atributos
 
-        private int id;
         private string cidade;
         private string bairro;
         private string ruaAv;
         private string numero;        
-        private string uf;
+        private string estado;
 
         #endregion
 
         #region Propriedades
 
-
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+        
         public string Cidade
         {
             get { return cidade; }
@@ -51,10 +45,10 @@ namespace Model.Models
             set { numero = value; }
         }
 
-        public string Uf
+        public string Estado
         {
-            get { return uf; }
-            set { uf = value; }
+            get { return estado; }
+            set { estado = value; }
         }
 
     #endregion
@@ -67,7 +61,7 @@ namespace Model.Models
             Bairro = null;
             RuaAv = null;
             Numero = null;
-            Uf = null;
+            Estado = null;
         }
 
         #endregion

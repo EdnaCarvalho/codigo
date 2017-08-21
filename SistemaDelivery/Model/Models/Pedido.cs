@@ -13,11 +13,12 @@ namespace Model.Models
 
         private int id;
         private Empresa empresa;
-        private Cliente cliente;
+        private Usuario cliente;
         private List<Produto> produtos;
         private DateTime dataRealizacao;
         private DateTime dataFinalizacao;
         private string descricao;
+        private string status;
         private Endereco enderecoEntrega;
         private List<Notificacao> notificacoes;
 
@@ -37,7 +38,12 @@ namespace Model.Models
             set { empresa = value; }
         }
 
-        public Cliente Cliente
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+        public Usuario Cliente
         {
             get { return cliente; }
             set { cliente = value; }
@@ -93,8 +99,11 @@ namespace Model.Models
         {
             Empresa = null;   
             Cliente = null;
+            status = null;
             Produtos = new List<Produto>();
+            Notificacoes = new List<Notificacao>();
             DataRealizacao = DateTime.Now;
+            DataFinalizacao = DateTime.Now;
             Descricao = null;
             EnderecoEntrega = null;
             Notificacoes = null;

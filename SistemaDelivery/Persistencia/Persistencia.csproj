@@ -40,10 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persistence\RepositorioCliente.cs" />
     <Compile Include="Persistence\RepositorioEmpresa.cs" />
     <Compile Include="Persistence\RepositorioPedido.cs" />
     <Compile Include="Persistence\RepositorioProduto.cs" />
+    <Compile Include="Persistence\RepositorioUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
