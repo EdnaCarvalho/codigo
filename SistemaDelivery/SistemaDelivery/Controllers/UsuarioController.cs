@@ -27,9 +27,14 @@ namespace SistemaDelivery.Controllers
         
         public ActionResult Details(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+               Usuario usuario = gerenciador.Obter(id);
+                if (usuario != null)
+                    return View(usuario);
+            }
+            return RedirectToAction("Index");
         }
-
 
         public ActionResult Create()
         {
@@ -54,27 +59,37 @@ namespace SistemaDelivery.Controllers
                 return View();
             }
         }
-
-        // GET: Usuario/Edit/5
-        public ActionResult Edit(int id)
+        
+        public ActionResult Edit(int? id)
         {
-            return View();
+
+            if (id.HasValue)
+            {
+                Usuario usuario = gerenciador.Obter(id);
+                if (usuario != null)
+                    return View(usuario);
+            }
+            return RedirectToAction("Index");
         }
 
-        // POST: Usuario/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int? id, Usuario usuario)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (id.HasValue)
+                {
+                   gerenciador.Editar(usuario);
+                    return View();
+                }
+                
             }
             catch
             {
-                return View();
+               
             }
+            return RedirectToAction("Details");
+           
         }
 
         // GET: Usuario/Delete/5
