@@ -3,37 +3,50 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Model.Models;
+using Negocio.Business;
 
 namespace SistemaDelivery.Controllers
 {
     public class UsuarioController : Controller
     {
-        // GET: Usuario
+        private GerenciadorUsuario gerenciador;
+
+        public UsuarioController()
+        {
+            gerenciador = new GerenciadorUsuario();
+        }
+        
         public ActionResult Index()
+        {            
+            Usuario usuario = new Usuario("Maria","maria@gmail.com","99992-233","eusoumaria",new Endereco(),"Maria1");
+            usuario.IsAdmin=true;
+            gerenciador.Adicionar(usuario);
+            return View(usuario);
+        }
+        
+        public ActionResult Details(int? id)
         {
             return View();
         }
 
-        // GET: Usuario/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
-        // GET: Usuario/Create
         public ActionResult Create()
         {
             return View();
         }
+          
 
-        // POST: Usuario/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Usuario usuario)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Adicionar(usuario);
+                    return RedirectToAction("Index");
+                }
                 return RedirectToAction("Index");
             }
             catch

@@ -20,6 +20,13 @@ namespace Model.Models
         private string login;
         private Boolean isAdmin;
         private List<Pedido> pedidos;
+        private string v1;
+        private string v2;
+        private string v3;
+        private string v4;
+        private Endereco endereco1;
+        private char v5;
+        private bool v6;
 
         #endregion
 
@@ -56,14 +63,14 @@ namespace Model.Models
         [StringLength(20, MinimumLength = 5)]
         [DataType(DataType.Password)]
         [RegularExpression(@"^[A-Za-z0-9_]$")]
-        private string Senha
+        public string Senha
         {
             get { return senha; }
             set { senha = value; }
         }
 
 
-        private Endereco Endereco
+        public Endereco Endereco
         {
             get { return endereco; }
             set { endereco = value; }
@@ -71,7 +78,7 @@ namespace Model.Models
 
         [Required]
         [StringLength(10, MinimumLength = 5)]
-        private string Login
+        public string Login
         {
             get { return login; }
             set { login = value; }
@@ -103,6 +110,17 @@ namespace Model.Models
             Login = null;
             Telefone = null;
             Pedidos = new List<Pedido>();
+        }
+
+        public Usuario(string nome, string email, string telefone, string senha, Endereco endereco1, string login)
+        {
+            Nome = nome;
+            Email = email;
+            Telefone = telefone;
+            Senha = senha;
+            Endereco = endereco1;
+            Login = login;
+            IsAdmin = false;
         }
         #endregion
     }
