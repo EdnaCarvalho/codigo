@@ -21,15 +21,18 @@
 
             @if (!Request.IsAuthenticated)
             {
-                   <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PEDIDOS
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("NOVO", "LoginView", "Login")</p>
-                            <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p>
-                        </div>
-                    </li>
+                <!--ADMINISTRADOR E CLIENTE-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        PEDIDOS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <p class="dropdown-item">@Html.ActionLink("NOVO", "LoginView", "Login")</p>
+                        <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p>
+                    </div>
+                </li>
+                <!--USUARIO ADMINISTRADOR-->
+                  
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             DISTRIBUIDORAS
@@ -50,6 +53,10 @@
                         </div>
                     </li>
 
+                    <!--USUARIO CLIENTE-->
+                      <li>@Html.ActionLink("EMPRESA ", "Index", "Home")</li>
+
+                    <!--ADMINISTRADOR E CLIENTE-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MEU PERFIL
@@ -59,6 +66,40 @@
                             <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p>
                         </div>
                     </li>
+                    
+
+                <!--EMPRESA-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PEDIDOS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item">@Html.ActionLink("ANALISAR PEDIDOS", "LoginView", "Login")</p>
+                            <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PRODUTOS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "LoginView", "Login")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Details", "Usuario")</p>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MEU PERFIL
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p>
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p>
+                        </div>
+                    </li>
+
+                    <!--TODOS-->
                     <li>@Html.ActionLink(" SAIR ", "Index", "Home")</li>
 
             }
@@ -68,6 +109,7 @@
             
         </div>
     </div>
+    <hr />
     <div class="container body-content">
         @RenderBody()
         <hr />

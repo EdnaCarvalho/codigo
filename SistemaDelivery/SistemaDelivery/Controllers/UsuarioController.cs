@@ -64,7 +64,7 @@ namespace SistemaDelivery.Controllers
             {
                 Usuario usuario = gerenciador.Obter(id);
                 if (usuario != null)
-                    return RedirectToAction("ListagemUsusarios");
+                    return RedirectToAction("ListagemUsuarios");
             }
             return View();
         }
