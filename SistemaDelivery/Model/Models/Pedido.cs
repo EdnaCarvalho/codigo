@@ -19,7 +19,7 @@ namespace Model.Models
         private DateTime dataFinalizacao;
         private string descricao;
         private string status;
-        private Endereco enderecoEntrega;
+        private string enderecoEntrega;
         private List<Notificacao> notificacoes;
 
         #endregion
@@ -79,7 +79,7 @@ namespace Model.Models
             set { descricao = value; }
         }
 
-        public Endereco EnderecoEntrega
+        public string EnderecoEntrega
         {
             get { return enderecoEntrega; }
             set { enderecoEntrega = value; }

@@ -19,10 +19,7 @@ namespace SistemaDelivery.Controllers
         
         public ActionResult Index()
         {            
-            Usuario usuario = new Usuario("Maria","maria@gmail.com","99992-233","eusoumaria",new Endereco(),"Maria1");
-            usuario.IsAdmin=true;
-            gerenciador.Adicionar(usuario);
-            return View(usuario);
+            return View();
         }
         
         public ActionResult Details(int? id)
@@ -50,14 +47,14 @@ namespace SistemaDelivery.Controllers
                 if (ModelState.IsValid)
                 {
                     gerenciador.Adicionar(usuario);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("ListagemUsuarios");
                 }
-                return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+              
             }
+            return View();
         }
         
         public ActionResult Edit(int? id)
@@ -67,9 +64,9 @@ namespace SistemaDelivery.Controllers
             {
                 Usuario usuario = gerenciador.Obter(id);
                 if (usuario != null)
-                    return View(usuario);
+                    return RedirectToAction("ListagemUsusarios");
             }
-            return RedirectToAction("Index");
+            return View();
         }
 
         [HttpPost]
@@ -77,41 +74,47 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
-                if (id.HasValue)
-                {
-                   gerenciador.Editar(usuario);
-                    return View();
-                }
-                
+                gerenciador.Editar(usuario);
+                    return RedirectToAction("Details");   
             }
             catch
             {
                
             }
-            return RedirectToAction("Details");
+            return View();
            
         }
 
-        // GET: Usuario/Delete/5
-        public ActionResult Delete(int id)
+        
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Usuario usuario = gerenciador.Obter(id);
+                if (usuario != null)
+                    return View(usuario);
+            }
+            return RedirectToAction("ListagemUsuarios");
         }
 
-        // POST: Usuario/Delete/5
+        
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int? id, Usuario usuario)
         {
             try
             {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                   gerenciador.Remover(usuario);
+                return RedirectToAction("ListagemUsuarios");
             }
             catch
             {
-                return View();
             }
+            return View();
+        }
+
+        public ActionResult ListagemUsuarios()
+        {
+            return View(gerenciador.ObterTodos());
         }
     }
 }

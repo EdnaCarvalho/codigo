@@ -20,13 +20,6 @@ namespace Model.Models
         private string login;
         private Boolean isAdmin;
         private List<Pedido> pedidos;
-        private string v1;
-        private string v2;
-        private string v3;
-        private string v4;
-        private Endereco endereco1;
-        private char v5;
-        private bool v6;
 
         #endregion
 
@@ -62,7 +55,7 @@ namespace Model.Models
         [Required]
         [StringLength(20, MinimumLength = 5)]
         [DataType(DataType.Password)]
-        [RegularExpression(@"^[A-Za-z0-9_]$")]
+        [RegularExpression(@"^[A-Za-z0-9_]+$")]
         public string Senha
         {
             get { return senha; }
