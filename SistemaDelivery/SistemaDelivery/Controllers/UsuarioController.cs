@@ -16,7 +16,8 @@ namespace SistemaDelivery.Controllers
         {
             gerenciador = new GerenciadorUsuario();
         }
-        
+
+        //Administrador
         public ActionResult Index()
         {            
             return View();
@@ -64,9 +65,9 @@ namespace SistemaDelivery.Controllers
             {
                 Usuario usuario = gerenciador.Obter(id);
                 if (usuario != null)
-                    return RedirectToAction("ListagemUsuarios");
+                    return View(usuario);
             }
-            return View();
+            return RedirectToAction("ListagemUsuarios");
         }
 
         [HttpPost]

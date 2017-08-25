@@ -27,7 +27,7 @@
                         PEDIDOS
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <p class="dropdown-item">@Html.ActionLink("NOVO", "LoginView", "Login")</p>
+                        <p class="dropdown-item">@Html.ActionLink("NOVO", "LoginView", "Login")</p> <!--MUDAR-->
                         <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p>
                     </div>
                 </li>
@@ -38,8 +38,8 @@
                             DISTRIBUIDORAS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRADAS", "LoginView", "Login")</p>
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVA", "LoginView", "Login")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADAS", "LoginView", "Login")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVA", "LoginView", "Login")</p><!--MUDAR-->
                         </div>
                     </li>
 
@@ -49,12 +49,13 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "ListagemUsuarios", "Usuario")</p>
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "create", "Usuario")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "CreateAdministrador", "Usuario")</p>
                         </div>
                     </li>
 
-                    <!--USUARIO CLIENTE-->
-                      <li>@Html.ActionLink("EMPRESA ", "Index", "Home")</li>
+                    <!--USUARIO CLIENTE-->             
+                            <li>@Html.ActionLink("Distribudoras", "Index", "Home")</li> <!--MUDAR-->
+
 
                     <!--ADMINISTRADOR E CLIENTE-->
                     <li class="nav-item dropdown">
@@ -62,8 +63,8 @@
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p>
-                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p>
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p> 
                         </div>
                     </li>
                     
@@ -74,8 +75,8 @@
                             PEDIDOS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ANALISAR PEDIDOS", "LoginView", "Login")</p>
-                            <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p>
+                            <p class="dropdown-item">@Html.ActionLink("ANALISAR PEDIDOS", "LoginView", "Login")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p><!--MUDAR-->
                         </div>
                     </li>
 
@@ -84,8 +85,8 @@
                             PRODUTOS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "LoginView", "Login")</p>
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Details", "Usuario")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "LoginView", "Login")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Details", "Usuario")</p><!--MUDAR-->
                         </div>
                     </li>
 
@@ -94,13 +95,14 @@
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p>
-                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p>
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p><!--MUDAR-->
                         </div>
                     </li>
 
                     <!--TODOS-->
                     <li>@Html.ActionLink(" SAIR ", "Index", "Home")</li>
+
 
             }
                     <li>@Html.ActionLink("ACESSAR", "LoginView", "Login")</li>
@@ -110,13 +112,13 @@
         </div>
     </div>
     <hr />
-    <div class="container body-content">
+    <!--<div class="container body-content ">-->
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year -Delivery Água e Gás trazendo o produto para pertinho de VOCÊ!</p>
-        </footer>
+    <div class="panel-footer">
+        <p>&copy; @DateTime.Now.Year -Delivery Água e Gás trazendo o produto para pertinho de VOCÊ!</p>
     </div>
+
      @Scripts.Render("~/bundles/jquery")
      @Scripts.Render("~/bundles/bootstrap")
      @RenderSection("scripts", required: false)

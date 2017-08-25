@@ -77,7 +77,7 @@ namespace Model.Models
             set { login = value; }
         }
 
-
+        [Display(Name = "Administrador")]
         public Boolean IsAdmin
         {
             get { return isAdmin; }
