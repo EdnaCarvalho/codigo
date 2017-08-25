@@ -25,6 +25,7 @@ namespace Model.Models
 
         #region Propriedades
 
+        [Key]
         public int Id
         {
             get { return id; }
@@ -32,7 +33,8 @@ namespace Model.Models
         }
 
         [Required]
-        [StringLength(50, MinimumLength = 10)]
+        [StringLength(50, MinimumLength = 5)]
+        [DataType(DataType.Text)]
         [Display(Name = "Nome Completo")]
         public string Nome
         {
@@ -40,12 +42,21 @@ namespace Model.Models
             set { nome = value; }
         }
 
+        [Required]
+        [StringLength(15, MinimumLength = 5)]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Email")]
         public string Email
         {
             get { return email; }
             set { email = value; }
         }
 
+        [Required]
+        [StringLength(12, MinimumLength = 12)]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^[0-9]+$")]
+        [Display(Name = "Telefone")]
         public string Telefone
         {
             get { return telefone; }
@@ -53,16 +64,17 @@ namespace Model.Models
         }
 
         [Required]
-        [StringLength(20, MinimumLength = 5)]
+        [StringLength(15, MinimumLength = 5)]
         [DataType(DataType.Password)]
         [RegularExpression(@"^[A-Za-z0-9_]+$")]
+        [Display(Name = "Email")]
         public string Senha
         {
             get { return senha; }
             set { senha = value; }
         }
 
-
+        [Required]
         public Endereco Endereco
         {
             get { return endereco; }
@@ -77,6 +89,7 @@ namespace Model.Models
             set { login = value; }
         }
 
+        [Required]
         [Display(Name = "Administrador")]
         public Boolean IsAdmin
         {

@@ -40,9 +40,9 @@ namespace Persistencia.Persistence
             return listaProdutos.Where(where).FirstOrDefault();
         }
 
-        public List<Produto> ObterTodos()
+        public List<Produto> ObterTodos(int codigoEmpresa)
         {
-            return listaProdutos;
+            return listaProdutos.Where(p => p.Empresa.Id == codigoEmpresa).ToList();
         }
     }
 }

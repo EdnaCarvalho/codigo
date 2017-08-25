@@ -3,87 +3,116 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Model.Models;
+using Negocio.Business;
 
 namespace SistemaDelivery.Controllers
 {
     public class ProdutoController : Controller
     {
-        // GET: Produto
+        private GerenciadorProduto gerenciador;
+        private Empresa empresa; //TODO: Utilizar pela sessão.
+
+        public ProdutoController()
+        {
+            empresa = new Empresa() { Id = 1 };
+            gerenciador = new GerenciadorProduto();
+        }
+
         public ActionResult Index()
         {
+            List<Produto> produtos = gerenciador.ObterTodos(empresa.Id);
+            if (produtos == null || produtos.Count == 0)
+                produtos = null;
             return View();
         }
 
-        // GET: Produto/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Produto/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Produto/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Produto produto)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Adicionar(produto);
+                    return RedirectToAction("Index");
+                }
             }
             catch
             {
-                return View();
+               
             }
-        }
-
-        // GET: Produto/Edit/5
-        public ActionResult Edit(int id)
-        {
             return View();
         }
 
-        // POST: Produto/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id.HasValue)
+            {
+                Produto produto = gerenciador.Obter(id);
+                if (produto != null)
+                    return View(produto);
+            }
+            return RedirectToAction("Index");
+        }
+        
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int? id, Produto produto)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if(id.HasValue)
+                {
+                    gerenciador.Editar(produto);
+                    return RedirectToAction("Index");
+                }
+                
             }
             catch
             {
-                return View();
+                
             }
-        }
-
-        // GET: Produto/Delete/5
-        public ActionResult Delete(int id)
-        {
             return View();
         }
+        
+        public ActionResult Delete(int? id)
+        {
+            if (id.HasValue)
+            {
+                Produto produto = gerenciador.Obter(id);
+                if (produto != null)
+                    return View(produto);
+            }
+            return RedirectToAction("Index");
+        }
 
-        // POST: Produto/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int? id, Produto produto) 
         {
             try
             {
-                // TODO: Add delete logic here
+                if (id.HasValue)
+                {
+                    gerenciador.Remover(produto);
+                    return RedirectToAction("Index");
+                }
 
-                return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+
             }
+            return View();
         }
     }
 }

@@ -9,19 +9,21 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div style=" font-family:'Times New Roman'; color:black; background-color: darkslateblue" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
+   
+          <div style=" font-family:'Times New Roman'; color:black; background-color: darkslateblue" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!--
+                <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
-                @Html.ActionLink("DELIVERYÁGUA&GÁS", "Index", "Usuario", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("DELIVERYÁGUA&GÁS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            
+            -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 
             @if (!Request.IsAuthenticated)
             {
-                <!--ADMINISTRADOR E CLIENTE-->
+                <!--ADMINISTRADOR -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         PEDIDOS
@@ -31,8 +33,6 @@
                         <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p>
                     </div>
                 </li>
-                <!--USUARIO ADMINISTRADOR-->
-                  
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             DISTRIBUIDORAS
@@ -49,26 +49,21 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "ListagemUsuarios", "Usuario")</p>
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "CreateAdministrador", "Usuario")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "CriarAdministrador", "Usuario")</p>
                         </div>
                     </li>
-
-                    <!--USUARIO CLIENTE-->             
-                            <li>@Html.ActionLink("Distribudoras", "Index", "Home")</li> <!--MUDAR-->
-
-
-                    <!--ADMINISTRADOR E CLIENTE-->
+                   
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p> 
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "DetalhesAdministrador", "Usuario")</p> 
                         </div>
                     </li>
-                    
 
+                 <li>@Html.ActionLink("Distribuidoras", "LoginView", "Login")</li><!--MUDAR-->
                 <!--EMPRESA-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,8 +80,8 @@
                             PRODUTOS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "LoginView", "Login")</p><!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Details", "Usuario")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "Index", "Produto")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Create", "Produto")</p><!--MUDAR-->
                         </div>
                     </li>
 

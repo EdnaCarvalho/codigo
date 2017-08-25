@@ -32,14 +32,14 @@ namespace Negocio.Business
             persistencia.Remover(produto);
         }
 
-        public Produto Obter(int id)
+        public Produto Obter(int? id)
         {
             return persistencia.Obter(e => e.Id == id);
         }
 
-        public List<Produto> ObterTodos()
+        public List<Produto> ObterTodos(int codigoEmpresa)
         {
-            return persistencia.ObterTodos();
+            return persistencia.ObterTodos(codigoEmpresa);
         }
     }
 }

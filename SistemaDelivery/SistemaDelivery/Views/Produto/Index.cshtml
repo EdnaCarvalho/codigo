@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Model.Models.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@if(Model == null)
+{
+    <p> Nenhum produto cadastrado. </p>
+}
+else
+{
+    WebGrid tabela = new WebGrid(source: Model, rowsPerPage: 4, canPage: true,
+        canSort: true, defaultSort: "Tipo.Descricao");
+    @tabela.GetHtml(caption: "Produtos", displayHeader: true, fillEmptyRows: true,
+        emptyRowCellValue: "---", mode: WebGridPagerModes.All, numericLinksCount: 2,
+        tableStyle: "table",
+        columns: tabela.Columns(
+            tabela.Column("Tipo.Descricao", "Descrição"),
+            tabela.Column("Tipo.Marca", "Marca"),
+            tabela.Column("Idade", "Idade"),
+            tabela.Column("Ações", "Ações", canSort: false,
+                format: (item) => new HtmlString(String.Format("{0}|{1}|{2}", new object[] {
+                    Html.ActionLink("Editar", "Visualizar", new { id = item.Id }).ToString(),
+                    Html.ActionLink("Remover", "Visualizar", new { id = item.Id }).ToString(),
+                    Html.ActionLink("Visualizar", "Visualizar", new { id = item.Id }).ToString()
+                }))
+            )
+        )
+    );
+}

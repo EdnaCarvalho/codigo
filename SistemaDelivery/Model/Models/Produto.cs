@@ -22,8 +22,6 @@ namespace Model.Models
 
         #region Propriedades
 
-
-
         public int Id
         {
             get { return id; }
@@ -31,8 +29,8 @@ namespace Model.Models
         }
         
         [Required]
-        [Range(100, 1200)]
         [Display(Name = "Preco por Unidade")]
+        [DataType(DataType.Text)]
         [DisplayFormat(DataFormatString = "{0:C}")]
         public double Preco
         {
@@ -40,17 +38,26 @@ namespace Model.Models
             set { preco = value; }
         }
 
+
+        [Required]
+        [Display(Name = "Quantidade do Produto")]
+        [DataType(DataType.Text)]
+        [RegularExpression(@"^[0-9]+$")]
         public int Quantidade
         {
             get { return quantidade; }
             set { quantidade = value; }
         }
 
+
+        [Required]
         public Empresa Empresa
         {
             get { return empresa; }
             set { empresa = value; }
         }
+
+        [Required]
         public TipoProduto Tipo
         {
             get { return tipo; }

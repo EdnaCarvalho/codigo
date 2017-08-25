@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
+
 namespace Model.Models
 {
     public class TipoProduto {
@@ -22,21 +24,35 @@ namespace Model.Models
 
         #region Propriedades
 
+        [Key]
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
+
+
+        [Required]
+        [Display(Name = "Marca do Produto")]
+        [DataType(DataType.Text)]
         public string Marca
         {
             get { return marca; }
             set { marca = value; }
         }
+
+        [Required]
+        [Display(Name = "Tipo do Produto")]
+        [DataType(DataType.Text)]
         public string Tipo
         {
             get { return tipo; }
             set { tipo = value; }
         }
+
+        [Required]
+        [Display(Name = "Descrição do Produto")]
+        [DataType(DataType.Text)]
         public string Descricao
         {
             get { return descricao; }
