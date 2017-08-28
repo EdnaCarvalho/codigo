@@ -43,6 +43,7 @@ namespace Persistencia.Persistence
         public List<Usuario> ObterTodos()
         {
             return listaUsuario;
+
         }
     }
 }

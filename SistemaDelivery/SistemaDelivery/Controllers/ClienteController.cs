@@ -3,80 +3,103 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Model.Models;
+using Negocio.Business;
 
 namespace SistemaDelivery.Controllers
 {
     public class ClienteController : Controller
     {
-        // GET: Cliente
+
+        private GerenciadorUsuario gerenciador;
+
+        public ClienteController()
+        {
+            gerenciador = new GerenciadorUsuario();
+        }
+
+
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Cliente/Details/5
+       
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Cliente/Create
+        
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Cliente/Create
+        
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Usuario Cliente)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    Cliente.IsAdmin = false;
+                    gerenciador.Adicionar(Cliente);
+                    return RedirectToAction("Index");
+                }
 
-                return RedirectToAction("Index");
             }
             catch
             {
-                return View();
-            }
-        }
 
-        // GET: Cliente/Edit/5
-        public ActionResult Edit(int id)
-        {
+            }
             return View();
         }
 
-        // POST: Cliente/Edit/5
+        
+        public ActionResult Edit(int? id)
+        {
+
+            if (id.HasValue)
+            {
+                Usuario cliente = gerenciador.Obter(id);
+                if (cliente != null)
+                    return View(cliente);
+            }
+            return RedirectToAction("Index");
+        }
+
+        
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Usuario cliente)
         {
             try
             {
-                // TODO: Add update logic here
-
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Editar(cliente);
+                }
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                
             }
+            return RedirectToAction("Index");
         }
 
-        // GET: Cliente/Delete/5
+        
         public ActionResult Delete(int id)
         {
             return View();
         }
-
-        // POST: Cliente/Delete/5
+        
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
             try
             {
-                // TODO: Add delete logic here
 
                 return RedirectToAction("Index");
             }
@@ -85,5 +108,11 @@ namespace SistemaDelivery.Controllers
                 return View();
             }
         }
+
+        public ActionResult AlterarSenha()
+        {
+            return View();
+        }
+
     }
 }

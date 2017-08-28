@@ -45,11 +45,11 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            CLIENTES
+                            USUARIOS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "ListagemUsuarios", "Usuario")</p>
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "CriarAdministrador", "Usuario")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CLIENTES CADASTRADOS", "ListagemUsuarios", "Administrador")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Create", "Administrador")</p>
                         </div>
                     </li>
                    
@@ -59,11 +59,24 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "DetalhesAdministrador", "Usuario")</p> 
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Administrador")</p> 
                         </div>
                     </li>
 
-                 <li>@Html.ActionLink("Distribuidoras", "LoginView", "Login")</li><!--MUDAR-->
+                     <!--CLIENTE-->
+                    <li>@Html.ActionLink("Distribuidoras", "LoginView", "Login")</li><!--MUDAR-->                
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MEU PERFIL
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Cliente")</p>
+                        </div>
+                    </li>
+
+
                 <!--EMPRESA-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

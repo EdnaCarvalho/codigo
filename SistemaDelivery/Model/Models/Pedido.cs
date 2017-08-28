@@ -11,6 +11,7 @@ namespace Model.Models
 
         #region Atributos
 
+
         private int id;
         private Empresa empresa;
         private Usuario cliente;
@@ -26,36 +27,39 @@ namespace Model.Models
 
         #region Propriedades
 
-
+        [Key]
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
+        [Required]
         public Empresa Empresa
         {
             get { return empresa; }
             set { empresa = value; }
         }
 
+        [Required]
         public string Status
         {
             get { return status; }
             set { status = value; }
         }
+        [Required]
         public Usuario Cliente
         {
             get { return cliente; }
             set { cliente = value; }
         }
-
+        [Required]
         public List<Produto> Produtos
         {
             get { return produtos; }
             set { produtos = value; }
         }
 
-        [Range(typeof(DateTime), "1/1/2017", "31/12/2018")]
+        [Range(typeof(DateTime), "1/1/2017", "31/12/2030")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
         public DateTime DataRealizacao
@@ -79,6 +83,7 @@ namespace Model.Models
             set { descricao = value; }
         }
 
+        [Required]
         public string EnderecoEntrega
         {
             get { return enderecoEntrega; }

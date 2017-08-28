@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 namespace Model.Models
+
 {
     public class Notificacao
     {
@@ -17,24 +19,27 @@ namespace Model.Models
 
         #region Propriedades
 
-
+        [Key]
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
+        [Required]
         public string Status
         {
             get { return status; }
             set { status = value; }
         }
 
+        [Required]
         public string Descricao
         {
             get { return descricao; }
             set { descricao = value; }
         }
 
+        [Required]
         public Pedido Pedido
         {
             get { return pedido; }

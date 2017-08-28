@@ -16,6 +16,7 @@ namespace Model.Models
         private string email;
         private string telefone;
         private string senha;
+        private string confirmarSenha;
         private Endereco endereco;
         private string login;
         private Boolean isAdmin;
@@ -32,7 +33,7 @@ namespace Model.Models
             set { id = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage ="Campo Obrigatório")]
         [StringLength(50, MinimumLength = 5)]
         [DataType(DataType.Text)]
         [Display(Name = "Nome Completo")]
@@ -42,8 +43,8 @@ namespace Model.Models
             set { nome = value; }
         }
 
-        [Required]
-        [StringLength(15, MinimumLength = 5)]
+        [Required(ErrorMessage ="Campo Obrigatório")]
+        [StringLength(50, MinimumLength = 5)]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string Email
@@ -53,7 +54,7 @@ namespace Model.Models
         }
 
         [Required]
-        [StringLength(12, MinimumLength = 12)]
+        [StringLength(12)]
         [DataType(DataType.PhoneNumber)]
         [RegularExpression(@"^[0-9]+$")]
         [Display(Name = "Telefone")]
@@ -63,11 +64,11 @@ namespace Model.Models
             set { telefone = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(15, MinimumLength = 5)]
         [DataType(DataType.Password)]
         [RegularExpression(@"^[A-Za-z0-9_]+$")]
-        [Display(Name = "Email")]
+        [Display(Name = "Senha")]
         public string Senha
         {
             get { return senha; }
@@ -75,14 +76,23 @@ namespace Model.Models
         }
 
         [Required]
+        [DataType(DataType.Password)]
+        [Compare("Senha")]
+        public  string ConfirmarSenha
+        {
+            get { return confirmarSenha; }
+            set { confirmarSenha = value; }
+        }
+
+        [Required ]
         public Endereco Endereco
         {
             get { return endereco; }
             set { endereco = value; }
         }
 
-        [Required]
-        [StringLength(10, MinimumLength = 5)]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [StringLength(20, MinimumLength = 5)]
         public string Login
         {
             get { return login; }
@@ -96,7 +106,7 @@ namespace Model.Models
             get { return isAdmin; }
             set { isAdmin = value; }
         }
-
+        
         public List<Pedido> Pedidos
         {
             get { return pedidos; }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace Model.Models
 {
@@ -20,31 +21,51 @@ namespace Model.Models
 
         #region Propriedades
 
-        
+
+        [Required(ErrorMessage = "Campo Obrigatorio")]
+        [StringLength(50, MinimumLength = 5)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Cidade")]
         public string Cidade
         {
             get { return cidade; }
             set { cidade = value; }
         }
 
+        [Required(ErrorMessage = "Campo Obrigatorio")]
+        [StringLength(50, MinimumLength = 5)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Bairro")]
         public string Bairro
         {
             get { return bairro; }
             set { bairro = value; }
         }
 
+        [Required(ErrorMessage = "Campo Obrigatorio")]
+        [StringLength(50, MinimumLength = 5)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Endereco")]
         public string RuaAv
         {
             get { return ruaAv; }
             set { ruaAv = value; }
         }
 
+        [Required(ErrorMessage = "Campo Obrigatorio")]
+        [StringLength(10, MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Nº ")]
         public string Numero
         {
             get { return numero; }
             set { numero = value; }
         }
 
+        [Required(ErrorMessage = "Campo Obrigatorio")]
+        [StringLength(2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "UF")]
         public string Estado
         {
             get { return estado; }

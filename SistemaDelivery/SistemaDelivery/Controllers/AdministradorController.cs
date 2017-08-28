@@ -13,85 +13,119 @@ namespace SistemaDelivery.Controllers
 
         private GerenciadorUsuario gerenciador;
 
+
         public AdministradorController()
         {
             gerenciador = new GerenciadorUsuario();
         }
+        
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Administrador/Details/5
-        public ActionResult Details(int id)
+        
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Usuario administrador = gerenciador.Obter(id);
+                if (administrador != null)
+                    return View(administrador);
+            }
+            return RedirectToAction("Index");
         }
 
-        // GET: Administrador/Create
+        
         public ActionResult Create()
         {
             return View();
         }
+        
 
-        // POST: Administrador/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Usuario administrador)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Adicionar(administrador);
+                    return RedirectToAction("ListagemUsuarios");
+                }
+               
             }
             catch
             {
-                return View();
+                
             }
-        }
-
-        // GET: Administrador/Edit/5
-        public ActionResult Edit(int id)
-        {
             return View();
         }
+        
+        public ActionResult Edit(int? id)
+        {
+            if (id.HasValue)
+            {
+                Usuario administrador = gerenciador.Obter(id);
+                if (administrador != null)
+                    return View(administrador);
+            }
+            return RedirectToAction("Index");
+        }
 
-        // POST: Administrador/Edit/5
+
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Usuario administrador)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Editar(administrador);                   
+                }   
+                 return RedirectToAction("Index");
             }
             catch
-            {
-                return View();
+            {                
             }
+            return RedirectToAction("Index");
         }
 
-        // GET: Administrador/Delete/5
-        public ActionResult Delete(int id)
+      
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Usuario administrador = gerenciador.Obter(id);
+                if (administrador != null)
+                    return View(administrador);
+            }
+            return RedirectToAction("ListagemUsuarios");
         }
 
-        // POST: Administrador/Delete/5
+        
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Usuario administrador)
         {
             try
             {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                gerenciador.Remover(administrador);
+                return RedirectToAction("ListagemUsuarios");            
             }
             catch
             {
-                return View();
+               
             }
+            return RedirectToAction("ListagemUsuarios");
         }
+
+        public ActionResult ListagemUsuarios()
+        {
+            List<Usuario> usuarios = gerenciador.ObterTodos();
+            if (usuarios == null || usuarios.Count == 0)
+                usuarios = null;
+            return View(usuarios);
+        }
+
     }
 }

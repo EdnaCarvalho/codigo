@@ -22,6 +22,7 @@ namespace Model.Models
 
         #region Propriedades
 
+        [Key]
         public int Id
         {
             get { return id; }
