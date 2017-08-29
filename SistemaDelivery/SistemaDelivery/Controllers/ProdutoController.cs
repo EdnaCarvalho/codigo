@@ -27,9 +27,15 @@ namespace SistemaDelivery.Controllers
             return View();
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Produto produto= gerenciador.Obter(id);
+                if (produto != null)
+                    return View(id);
+            }
+            return RedirectToAction("Index");
         }
 
         public ActionResult Create()
@@ -42,6 +48,7 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
+                produto.Empresa = empresa;
                 if (ModelState.IsValid)
                 {
                     gerenciador.Adicionar(produto);
@@ -71,7 +78,7 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
-                if(id.HasValue)
+                if(ModelState.IsValid)
                 {
                     gerenciador.Editar(produto);
                     return RedirectToAction("Index");
@@ -101,7 +108,7 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
-                if (id.HasValue)
+                if (ModelState.IsValid)
                 {
                     gerenciador.Remover(produto);
                     return RedirectToAction("Index");

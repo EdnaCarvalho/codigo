@@ -210,6 +210,7 @@
     <Content Include="Views\Cliente\Edit.cshtml" />
     <Content Include="Views\Cliente\AlterarSenha.cshtml" />
     <Content Include="Views\Administrador\ListagemUsuarios.cshtml" />
+    <Content Include="Views\Produto\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

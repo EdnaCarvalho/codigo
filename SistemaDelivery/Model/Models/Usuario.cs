@@ -127,17 +127,7 @@ namespace Model.Models
             Telefone = null;
             Pedidos = new List<Pedido>();
         }
-
-        public Usuario(string nome, string email, string telefone, string senha, Endereco endereco1, string login)
-        {
-            Nome = nome;
-            Email = email;
-            Telefone = telefone;
-            Senha = senha;
-            Endereco = endereco1;
-            Login = login;
-            IsAdmin = false;
-        }
+        
         #endregion
     }
 }
