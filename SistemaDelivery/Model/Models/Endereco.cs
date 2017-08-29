@@ -1,8 +1,3 @@
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 
 namespace Model.Models
@@ -20,7 +15,6 @@ namespace Model.Models
         #endregion
 
         #region Propriedades
-
 
         [Required(ErrorMessage = "Campo Obrigatorio")]
         [StringLength(50, MinimumLength = 5)]
@@ -72,7 +66,7 @@ namespace Model.Models
             set { estado = value; }
         }
 
-    #endregion
+        #endregion
 
         #region Construtor
 
@@ -85,6 +79,6 @@ namespace Model.Models
             Estado = null;
         }
 
-        #endregion
+       #endregion
     }
 }

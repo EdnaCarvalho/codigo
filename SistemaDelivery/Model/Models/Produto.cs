@@ -34,7 +34,6 @@ namespace Model.Models
             set { preco = value; }
         }
 
-
         [Required]
         [Display(Name = "Quantidade do Produto")]
         [DataType(DataType.Text)]
@@ -44,7 +43,6 @@ namespace Model.Models
             get { return quantidade; }
             set { quantidade = value; }
         }
-
 
         [Required]
         public Empresa Empresa
@@ -60,7 +58,6 @@ namespace Model.Models
             set { tipoProduto = value; }
         }
 
-
         #endregion
 
         #region Construtor
@@ -71,6 +68,7 @@ namespace Model.Models
             Quantidade = 0;
             Preco = 0.0;
         }
+
         #endregion
     }
 }

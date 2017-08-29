@@ -1,14 +1,10 @@
-
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 
 namespace Model.Models{
 
-    public class Empresa {
-
+    public class Empresa
+    {
         #region Atributos
 
         private int id;
@@ -33,7 +29,6 @@ namespace Model.Models{
             get { return id; }
             set { id = value; }
         }
-
 
         public string Nome
         {

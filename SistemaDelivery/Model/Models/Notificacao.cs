@@ -1,9 +1,5 @@
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
+
 namespace Model.Models
 
 {
@@ -15,6 +11,7 @@ namespace Model.Models
         private string status;
         private string descricao;
         private Pedido pedido;
+
         #endregion
 
         #region Propriedades
@@ -25,6 +22,7 @@ namespace Model.Models
             get { return id; }
             set { id = value; }
         }
+
         [Required]
         public string Status
         {
@@ -56,6 +54,7 @@ namespace Model.Models
             Descricao = null;
             Pedido = null;
         }
+
         #endregion
     }
 }
