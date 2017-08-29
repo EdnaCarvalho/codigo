@@ -40,6 +40,7 @@ namespace SistemaDelivery.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.ListaMarca = new SelectList(null, "Id", "Marca", "Selecione...");
             return View();
         }
 
@@ -48,9 +49,9 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
-                produto.Empresa = empresa;
                 if (ModelState.IsValid)
                 {
+                    produto.Empresa = empresa;
                     gerenciador.Adicionar(produto);
                     return RedirectToAction("Index");
                 }

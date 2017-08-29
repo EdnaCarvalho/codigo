@@ -13,11 +13,8 @@ namespace Model.Models
         #region Atributos
 
         private int id;
-        
         private string marca;
-        
         private string tipo;
-        
         private string descricao;
 
         #endregion
@@ -30,7 +27,6 @@ namespace Model.Models
             get { return id; }
             set { id = value; }
         }
-
 
         [Required]
         [Display(Name = "Marca do Produto")]
@@ -59,7 +55,7 @@ namespace Model.Models
             set { descricao = value; }
         }
 
-#endregion
+        #endregion
 
         #region Construtor
 
@@ -69,7 +65,7 @@ namespace Model.Models
             Tipo = null;
             Descricao = null;
         }
-#endregion
 
+        #endregion
     }
 }

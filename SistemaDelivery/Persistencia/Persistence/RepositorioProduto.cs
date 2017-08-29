@@ -10,6 +10,7 @@ namespace Persistencia.Persistence
     public class RepositorioProduto
     {
         private static List<Produto> listaProdutos;
+        // Criar uma lista de TipoProduto
 
         static RepositorioProduto()
         {

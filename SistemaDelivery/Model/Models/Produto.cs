@@ -1,8 +1,3 @@
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 
 namespace Model.Models
@@ -16,7 +11,7 @@ namespace Model.Models
         private double preco;
         private int quantidade;
         private Empresa empresa;
-        private TipoProduto tipo;
+        private TipoProduto tipoProduto;
 
         #endregion
 
@@ -59,10 +54,10 @@ namespace Model.Models
         }
 
         [Required]
-        public TipoProduto Tipo
+        public TipoProduto TipoProduto
         {
-            get { return tipo; }
-            set { tipo = value; }
+            get { return tipoProduto; }
+            set { tipoProduto = value; }
         }
 
 
