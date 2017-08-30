@@ -1,4 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
 
@@ -14,7 +18,7 @@ namespace SistemaDelivery.Controllers
         }
         public ActionResult Index()
         {
-            return View(gerenciador.ObterTodos());
+            return View();
         }
 
         public ActionResult Details(int? id)
@@ -41,7 +45,7 @@ namespace SistemaDelivery.Controllers
                 if (ModelState.IsValid)
                 {
                     gerenciador.Adicionar(empresa);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("ListagemDistribuidoras");
                 }
             }
             catch
@@ -86,7 +90,7 @@ namespace SistemaDelivery.Controllers
                 if (empresa != null)
                     return View(empresa);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("ListagemDistribuidoras");
         }
 
         [HttpPost]
@@ -95,13 +99,21 @@ namespace SistemaDelivery.Controllers
             try
             {
                 gerenciador.Remover(empresa);
-                return RedirectToAction("Index");
+                return RedirectToAction("ListagemDistribuidoras");
             }
             catch
             {
                 
             }
             return View();
+        }
+        public ActionResult ListagemDistribuidoras()
+        {
+            
+            List<Empresa> empresa = gerenciador.ObterTodos();
+            if (empresa == null || empresa.Count == 0)
+                empresa = null;
+            return View(empresa);
         }
 
     }

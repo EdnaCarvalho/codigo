@@ -4,63 +4,74 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<center>
+    <div class="form-horizontal">
 
-<div>
-    <h4>Empresa</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+        <div class="container text-center">
+            <div class="row thumbnail">
+                <h4> Dados de:   @Html.DisplayFor(model => model.Nome)  </h4>
+                <hr />
+                <div class="form-group">
+                    <div>
+                        @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-3">
+                            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+                        @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-3">
+                            @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
+                        <div class="col-md-2"> </div>
+                    </div>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Endereco.Bairro, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.Endereco.Bairro, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Senha)
-        </dt>
+                    @Html.LabelFor(model => model.Endereco.RuaAv, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.Endereco.RuaAv, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
+                    <div class="col-md-2"> </div>
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Senha)
-        </dd>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Endereco.Cidade, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.Endereco.Cidade, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cnpj)
-        </dt>
+                    @Html.LabelFor(model => model.Endereco.Numero, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.Endereco.Numero, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cnpj)
-        </dd>
+                    @Html.LabelFor(model => model.Endereco.Estado, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.Endereco.Estado, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
+                    <div class="col-md-2"> </div>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NomeDono)
-        </dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
+                    <div class="col-md-7"> </div>
+                </div>
+                
 
-        <dd>
-            @Html.DisplayFor(model => model.NomeDono)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Login)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Login)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            </div>
+        </div>
+        <br />
+        <p>
+            @Html.ActionLink("Voltar", "ListagemDistribuidoras")
+        </p>
+    </div>
+</center>

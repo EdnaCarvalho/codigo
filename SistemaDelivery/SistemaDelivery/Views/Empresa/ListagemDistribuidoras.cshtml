@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Model.Models.Empresa>
+@{
+    ViewBag.Title = "ListagemDistribuidoras";
+}
+
+
+<center>
+
+    <div class="row ">
+        <div class="col-lg-12">
+            <div style="padding: 10px;">
+                <div class="row thumbnail">
+                    <h2>Distribuidoras</h2>
+                    <hr/>
+
+                    @if (Model == null)
+                    {
+                        <p> Nenhuma Empresa Cadastrada. </p>
+                    }
+                    else
+                    {
+                        // TODO alterar posteriormente para a verificação de qual usuario ver a listagem
+                        WebGrid tabela = new WebGrid(source: Model, rowsPerPage: 4, canPage: true,
+                            canSort: true, defaultSort: "Empresa");
+                        @tabela.GetHtml(caption: "", displayHeader: true, fillEmptyRows: true,
+                        emptyRowCellValue: "___", mode: WebGridPagerModes.All, numericLinksCount: 2,
+                        tableStyle: "table",
+                        columns: tabela.Columns(
+                            tabela.Column("Nome", "Nome"),
+                            tabela.Column("Status", "Status"),
+                            tabela.Column("Ações", "Ações", canSort: false,
+                                format: (item) => new HtmlString(String.Format("{0}|{1}", new object[] {
+                                    Html.ActionLink("Remover", "Delete", new { id = item.Id }).ToString(),
+                                    Html.ActionLink("Detalhes", "Details", new { id = item.Id }).ToString(),
+                                    
+                                }))
+                        )
+                    )
+                        );
+                    }
+                    <p>
+                        @Html.ActionLink("Adicionar Novo", "Create")
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+
