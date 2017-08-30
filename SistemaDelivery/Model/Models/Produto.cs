@@ -44,14 +44,12 @@ namespace Model.Models
             set { quantidade = value; }
         }
 
-        [Required]
         public Empresa Empresa
         {
             get { return empresa; }
             set { empresa = value; }
         }
 
-        [Required]
         public TipoProduto TipoProduto
         {
             get { return tipoProduto; }

@@ -124,5 +124,10 @@ namespace SistemaDelivery.Controllers
             return View(usuarios);
         }
 
+        public ActionResult AlterarSenha()
+        {
+            return View();
+        }
+
     }
 }

@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 
 namespace Model.Models{
 
@@ -15,7 +13,7 @@ namespace Model.Models{
         private string nome;
         private string email;
         private string senha;
-        private string comfirmarSenha;
+        private string confirmarSenha;
         private Endereco endereco;
         private string telefone;
         private string cnpj;
@@ -29,12 +27,14 @@ namespace Model.Models{
         #endregion
 
         #region Propriedades
+
         [Key]
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
+
         [Required]
         [StringLength(12)]
         [DataType(DataType.PhoneNumber)]
@@ -44,14 +44,6 @@ namespace Model.Models{
         {
             get { return telefone; }
             set { telefone = value; }
-        }
-        [Required]
-        [DataType(DataType.Password)]
-        [Compare("Senha")]
-        public String ComfirmarSenha
-        {
-            get { return comfirmarSenha; }
-            set { comfirmarSenha = value; }
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
@@ -63,6 +55,7 @@ namespace Model.Models{
             get { return nome; }
             set { nome = value; }
         }
+
         [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(20, MinimumLength = 5)]
         public string Status
@@ -78,6 +71,7 @@ namespace Model.Models{
             get { return cpf; }
             set { cpf = value; }
         }
+
         [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(50, MinimumLength = 5)]
         [DataType(DataType.EmailAddress)]
@@ -99,11 +93,22 @@ namespace Model.Models{
             set { senha = value; }
         }
 
+        [Required]
+        [DataType(DataType.Password)]
+        [Compare("Senha")]
+        public String ConfirmarSenha
+        {
+            get { return confirmarSenha; }
+            set { confirmarSenha = value; }
+        }
+
+        [Required]
         public Endereco Endereco
         {
             get { return endereco; }
             set { endereco = value; }
         }
+
         [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(20, MinimumLength = 5)]
         public string Cnpj
@@ -114,7 +119,7 @@ namespace Model.Models{
 
         [Required]
         [StringLength(50, MinimumLength = 10)]
-        [Display(Name = "Proprietario")]
+        [Display(Name = "Proprietário")]
         public string Proprietario
         {
             get { return proprietario; }

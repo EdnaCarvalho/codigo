@@ -116,5 +116,10 @@ namespace SistemaDelivery.Controllers
             return View(empresa);
         }
 
+        public ActionResult AlterarSenha()
+        {
+            return View();
+        }
+
     }
 }

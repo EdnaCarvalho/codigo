@@ -38,5 +38,15 @@ namespace Negocio.Business
         {
             return persistencia.ObterTodos(codigoEmpresa);
         }
+
+        public List<TipoProduto> ObterTodosTipos()
+        {
+            return persistencia.ObterTodosTipos();
+        }
+
+        public TipoProduto ObterTipoProduto(int? id)
+        {
+            return persistencia.ObterTipo(t => t.Id == id);
+        }
     }
 }

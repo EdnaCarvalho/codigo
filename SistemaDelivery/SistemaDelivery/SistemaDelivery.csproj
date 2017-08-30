@@ -211,6 +211,9 @@
     <Content Include="Views\Cliente\AlterarSenha.cshtml" />
     <Content Include="Views\Administrador\ListagemUsuarios.cshtml" />
     <Content Include="Views\Produto\Details.cshtml" />
+    <Content Include="Views\Empresa\ListagemDistribuidoras.cshtml" />
+    <Content Include="Views\Administrador\AlterarSenha.cshtml" />
+    <Content Include="Views\Empresa\AlterarSenha.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

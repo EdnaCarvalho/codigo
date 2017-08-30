@@ -23,10 +23,10 @@ else
         emptyRowCellValue: "---", mode: WebGridPagerModes.All, numericLinksCount: 2,
         tableStyle: "table",
         columns: tabela.Columns(
-            tabela.Column("Tipo.Descricao", "Descricao"),
-            tabela.Column("Tipo.Marca", "Marca"),
+            tabela.Column("TipoProduto.Descricao", "Descrição"),
+            tabela.Column("TipoProduto.Marca", "Marca"),
             tabela.Column("Quantidade", "Quantidade"),
-            tabela.Column("Preco", "Preco"),
+            tabela.Column("Preco", "Preço"),
             tabela.Column("Ações", "Ações", canSort: false,
                 format: (item) => new HtmlString(String.Format("{0}|{1}|{2}", new object[] {
                     Html.ActionLink("Editar", "Edit", new { id = item.Id }).ToString(),
@@ -37,5 +37,3 @@ else
         )
     );
 }
-
-

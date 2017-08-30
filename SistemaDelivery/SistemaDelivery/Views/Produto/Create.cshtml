@@ -16,11 +16,12 @@
                 <hr />
                 <div class="col-md-offset-1 col-md-10 configdiv">
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+          
                     <div class="form-group">
                         @Html.LabelFor(model => model.TipoProduto.Tipo, htmlAttributes: new { @class = "control-label col-md-5" })
-
                         <div class="col-md-4">
-                            @Html.DropDownListFor(model => model.TipoProduto.Tipo, (SelectList) ViewBag.ListaMarca, new { htmlAttributes = new { @class = "form-control" } })
+                            Água @Html.RadioButtonFor(model => model.TipoProduto.Tipo, "Água", new { htmlAttributes = new { @class = "form-control" } })
+                            Gás @Html.RadioButtonFor(model => model.TipoProduto.Tipo, "Gás", new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.TipoProduto.Tipo, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -28,16 +29,14 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.TipoProduto.Marca, htmlAttributes: new { @class = "control-label col-md-5" })
                         <div class="col-md-4">
-                            @Html.EditorFor(model => model.TipoProduto.Marca, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.TipoProduto.Marca, "", new { @class = "text-danger" })
+                            @Html.DropDownListFor(model => model.TipoProduto.Id, (SelectList)ViewBag.ListaMarca, "Selecione...", new { htmlAttributes = new { @class = "form-control" } })
                         </div>
                     </div>
 
                     <div class="form-group">
                         @Html.LabelFor(model => model.TipoProduto.Descricao, htmlAttributes: new { @class = "control-label col-md-5" })
                         <div class="col-md-4">
-                            @Html.EditorFor(model => model.TipoProduto.Descricao, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.TipoProduto.Descricao, "", new { @class = "text-danger" })
+                            @Html.DropDownListFor(model => model.TipoProduto.Id, (SelectList)ViewBag.ListaDescricao, "Selecione...", new { htmlAttributes = new { @class = "form-control" } })
                         </div>
                     </div>
 

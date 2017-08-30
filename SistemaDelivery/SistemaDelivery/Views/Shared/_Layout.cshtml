@@ -12,34 +12,24 @@
    
           <div style=" font-family:'Times New Roman'; color:black; background-color: darkslateblue" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <!--
                 <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
                 @Html.ActionLink("DELIVERYÁGUA&GÁS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 
             @if (!Request.IsAuthenticated)
             {
+                //TODO valta para todos o menu de Pedidos
                 <!--ADMINISTRADOR -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        PEDIDOS
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <p class="dropdown-item">@Html.ActionLink("NOVO", "LoginView", "Login")</p> <!--MUDAR-->
-                        <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p>
-                    </div>
-                </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             DISTRIBUIDORAS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRADAS", "LoginView", "Login")</p> <!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVA", "LoginView", "Login")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADAS", "ListagemDistribuidoras", "Empresa")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVA", "Create", "Empresa")</p><!--MUDAR-->
                         </div>
                     </li>
 
@@ -58,35 +48,26 @@
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Administrador")</p> <!--MUDAR-->
                             <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Administrador")</p> 
                         </div>
                     </li>
 
                      <!--CLIENTE-->
-                    <li>@Html.ActionLink("Distribuidoras", "LoginView", "Login")</li><!--MUDAR-->                
+                    <li>@Html.ActionLink("Distribuidoras", "ListagemDistribuidoras", "Empresa")</li><!--MUDAR-->                
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Cliente")</p> <!--MUDAR-->
                             <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Cliente")</p>
                         </div>
                     </li>
 
 
                 <!--EMPRESA-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PEDIDOS
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ANALISAR PEDIDOS", "LoginView", "Login")</p> <!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("HISTORICO", "Details", "Usuario")</p><!--MUDAR-->
-                        </div>
-                    </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -103,8 +84,8 @@
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "LoginView", "Login")</p> <!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Details", "Usuario")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Empresa")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Empresa")</p><!--MUDAR-->
                         </div>
                     </li>
 

@@ -21,7 +21,7 @@ namespace SistemaDelivery.Controllers
             List<Produto> produtos = gerenciador.ObterTodos(empresa.Id);
             if (produtos == null || produtos.Count == 0)
                 produtos = null;
-            return View();
+            return View(produtos);
         }
 
         public ActionResult Details(int? id)
@@ -37,18 +37,22 @@ namespace SistemaDelivery.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.ListaMarca = new SelectList(null, "Id", "Marca", "Selecione...");
+            ViewBag.ListaDescricao = new SelectList(gerenciador.ObterTodosTipos(), "Id", "Descricao");
+            ViewBag.ListaMarca = new SelectList(gerenciador.ObterTodosTipos(), "Id", "Marca");
             return View();
         }
 
         [HttpPost]
-        public ActionResult Create(Produto produto)
+        public ActionResult Create(FormCollection form)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    produto.Empresa = empresa;
+                    TipoProduto TipoProduto = new TipoProduto();
+                    Produto produto = new Produto() { Empresa = empresa, TipoProduto = TipoProduto };
+                    TryUpdateModel(produto, form.ToValueProvider());
+                    produto.TipoProduto = gerenciador.ObterTipoProduto(produto.TipoProduto.Id);
                     gerenciador.Adicionar(produto);
                     return RedirectToAction("Index");
                 }

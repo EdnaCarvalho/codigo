@@ -8,7 +8,15 @@ namespace Persistencia.Persistence
     public class RepositorioProduto
     {
         private static List<Produto> listaProdutos;
-        // Criar uma lista de TipoProduto
+
+        private static List<TipoProduto> listaTipoProduto = new List<TipoProduto>()
+        {
+            new TipoProduto() { Id = 1, Tipo = "agua", Marca = "Lev", Descricao = "2l" },
+            new TipoProduto() { Id = 2, Tipo = "agua", Marca = "Indaiá", Descricao = "2l" },
+            new TipoProduto() { Id = 3, Tipo = "agua", Marca = "Cristal", Descricao = "2l" },
+            new TipoProduto() { Id = 4, Tipo = "gas", Marca = "Ultragaz", Descricao = "P45" },
+            new TipoProduto() { Id = 5, Tipo = "gas", Marca = "Liquigaz", Descricao = "P13" }
+        };
 
         static RepositorioProduto()
         {
@@ -42,6 +50,16 @@ namespace Persistencia.Persistence
         public List<Produto> ObterTodos(int codigoEmpresa)
         {
             return listaProdutos.Where(p => p.Empresa.Id == codigoEmpresa).ToList();
+        }
+
+        public List<TipoProduto> ObterTodosTipos()
+        {
+            return listaTipoProduto;
+        }
+
+        public TipoProduto ObterTipo(Func<TipoProduto, bool> where)
+        {
+            return listaTipoProduto.Where(where).FirstOrDefault();
         }
     }
 }
