@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<Model.Models.Produto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Produto";
 }
 
+<center>
+<div class="container text-center">
+    <h2>Produto</h2>
+    <div class="row thumbnail">
+        
+        @if (Model == null)
+        {
+            <p> Nenhum produto cadastrado. </p>
+        }
 
-<h2>Index</h2>
+        else
+        {
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-@if (Model == null)
-{
-    <p> Nenhum produto cadastrado. </p>
-}
-else
-{
-    WebGrid tabela = new WebGrid(source: Model, rowsPerPage: 4, canPage: true,
-        canSort: true, defaultSort: "Produto");
-    @tabela.GetHtml(caption: "Produtos", displayHeader: true, fillEmptyRows: true,
+            WebGrid tabela = new WebGrid(source: Model, rowsPerPage: 3, canPage: true,
+            canSort: true, defaultSort: "Produto");
+            @tabela.GetHtml(caption: "", displayHeader: true, fillEmptyRows: true,
         emptyRowCellValue: "---", mode: WebGridPagerModes.All, numericLinksCount: 2,
         tableStyle: "table",
         columns: tabela.Columns(
@@ -36,4 +36,11 @@ else
             )
         )
     );
-}
+        }
+
+    </div>
+</div>
+    <p>
+        @Html.ActionLink("Criar Novo", "Create")
+    </p>
+</center>
