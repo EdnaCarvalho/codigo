@@ -83,15 +83,15 @@ namespace SistemaDelivery.Controllers
                 if(ModelState.IsValid)
                 {
                     gerenciador.Editar(produto);
-                    return RedirectToAction("Index");
                 }
-                
+                return RedirectToAction("Index");
+
             }
             catch
             {
                 
             }
-            return View();
+            return RedirectToAction("Index");
         }
         
         public ActionResult Delete(int? id)

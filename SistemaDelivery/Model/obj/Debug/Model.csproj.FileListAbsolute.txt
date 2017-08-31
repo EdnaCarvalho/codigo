@@ -8,3 +8,8 @@ D:\codigo\SistemaDelivery\Model\bin\Debug\Model.pdb
 D:\codigo\SistemaDelivery\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\codigo\SistemaDelivery\Model\obj\Debug\Model.dll
 D:\codigo\SistemaDelivery\Model\obj\Debug\Model.pdb
+C:\PROJETO\codigo\SistemaDelivery\Model\bin\Debug\Model.dll
+C:\PROJETO\codigo\SistemaDelivery\Model\bin\Debug\Model.pdb
+C:\PROJETO\codigo\SistemaDelivery\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\PROJETO\codigo\SistemaDelivery\Model\obj\Debug\Model.dll
+C:\PROJETO\codigo\SistemaDelivery\Model\obj\Debug\Model.pdb

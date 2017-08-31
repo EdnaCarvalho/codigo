@@ -16,3 +16,12 @@ D:\codigo\SistemaDelivery\Negocio\bin\Debug\Persistencia.pdb
 D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.dll
 D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.pdb
+C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.dll
+C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.pdb
+C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Model.dll
+C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Persistencia.dll
+C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Model.pdb
+C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Persistencia.pdb
+C:\PROJETO\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\PROJETO\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.dll
+C:\PROJETO\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.pdb
