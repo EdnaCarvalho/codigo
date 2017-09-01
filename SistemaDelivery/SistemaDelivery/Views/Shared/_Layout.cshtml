@@ -51,11 +51,9 @@
                             <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Administrador")</p> <!--MUDAR-->
                             <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Administrador")</p> 
                         </div>
-                    </li>
-
-                     <!--CLIENTE-->
-                    <li>@Html.ActionLink("Distribuidoras", "ListagemDistribuidoras", "Empresa")</li><!--MUDAR-->                
-
+                    </li>           
+                     
+                    //Cliente
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MEU PERFIL
@@ -90,7 +88,7 @@
                     </li>
 
                     <!--TODOS-->
-                    <li>@Html.ActionLink(" SAIR ", "Index", "Home")</li>
+                    <li>@Html.ActionLink(" SAIR ", "LoginView", "Login")</li>
 
 
             }
