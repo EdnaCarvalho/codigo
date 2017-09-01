@@ -19,3 +19,10 @@ C:\PROJETO\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.pdb
 C:\PROJETO\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
 C:\PROJETO\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.dll
 C:\PROJETO\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.dll
+C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.pdb
+C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.pdb

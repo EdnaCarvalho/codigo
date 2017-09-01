@@ -88,7 +88,13 @@
                             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         </div>
-                        <div class="col-md-7"> </div>
+                        @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            Aberto @Html.RadioButtonFor(model => model.Status, "Aberto", new { htmlAttributes = new { @class = "form-control" } })
+                            Fechado @Html.RadioButtonFor(model => model.Status, "Fechado", new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3"> </div>
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
