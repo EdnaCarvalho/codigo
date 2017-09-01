@@ -26,16 +26,16 @@
                             emptyRowCellValue: "---", mode: WebGridPagerModes.All, numericLinksCount: 2,
                             tableStyle: "table",
                             columns: tabela.Columns(
-                                tabela.Column("TipoProduto.Descricao", "Descrição"),
+                                tabela.Column("TipoProduto.Tipo", "Tipo"),
                                 tabela.Column("TipoProduto.Marca", "Marca"),
-                                tabela.Column("Quantidade", "Quantidade"),
+                                tabela.Column("TipoProduto.Descricao", "Descrição"),
                                 tabela.Column("Preco", "Preço"),
+                                tabela.Column("Quantidade", "Quantidade"),
                                 tabela.Column("Ações", "Ações", canSort: false,
-                                format: (item) => new HtmlString(String.Format("{0}|{1}|{2}", new object[] {
+                                format: (item) => new HtmlString(String.Format("{0}|{1}", new object[] {
                                 Html.ActionLink("Editar", "Edit", new { id = item.Id }).ToString(),
-                                Html.ActionLink("Remover", "Delete", new { id = item.Id }).ToString(),
-                                Html.ActionLink("Visualizar", "Details", new { id = item.Id }).ToString()
-                                        }))
+                                Html.ActionLink("Remover", "Delete", new { id = item.Id }).ToString()
+                                   }))
                                 )
                             )
                         );

@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Exceptions\AplicacaoException.cs" />
+    <Compile Include="Models\Exceptions\ControllerException.cs" />
+    <Compile Include="Models\Exceptions\ModelException.cs" />
+    <Compile Include="Models\Exceptions\NegocioException.cs" />
+    <Compile Include="Models\Exceptions\PersistenciaException.cs" />
+    <Compile Include="Models\Exceptions\ViewException.cs" />
     <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Notificacao.cs" />
@@ -50,8 +56,6 @@
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,46 +5,58 @@
 }
 
 <center>
-<h3>Tem certeza que deseja deletar?</h3>
-<div>
-    <div class="container text-center">
-        <div class="row thumbnail">
-            <h4>Produto</h4>
-            <hr />
-                <div class="form-group">
-                    @Html.LabelFor(model => model.TipoProduto.Tipo, htmlAttributes: new { @class = "control-label col-md-5" })
-                    <div class="col-md-4">
-                        @Html.EditorFor(model => model.TipoProduto.Tipo, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+        <div class="form-horizontal">
+            <div class="container text-center">
+                <div class="row thumbnail">
+                    <h4>Tem certeza que deseja deletar?</h4>
+                    <hr />
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TipoProduto.Tipo, htmlAttributes: new { @class = "control-label col-md-5" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.TipoProduto.Tipo, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
                     </div>
-                    @Html.LabelFor(model => model.TipoProduto.Marca, htmlAttributes: new { @class = "control-label col-md-5" })
-                    <div class="col-md-4">
-                        @Html.EditorFor(model => model.TipoProduto.Marca, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TipoProduto.Marca, htmlAttributes: new { @class = "control-label col-md-5" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.TipoProduto.Marca, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
                     </div>
-                    @Html.LabelFor(model => model.TipoProduto.Descricao, htmlAttributes: new { @class = "control-label col-md-5" })
-                    <div class="col-md-4">
-                        @Html.EditorFor(model => model.TipoProduto.Descricao, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TipoProduto.Descricao, htmlAttributes: new { @class = "control-label col-md-5" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.TipoProduto.Descricao, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
                     </div>
-                    @Html.LabelFor(model => model.Preco, htmlAttributes: new { @class = "control-label col-md-5" })
-                    <div class="col-md-4">
-                        @Html.EditorFor(model => model.Preco, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Preco, htmlAttributes: new { @class = "control-label col-md-5" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Preco, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
                     </div>
-                    @Html.LabelFor(model => model.Quantidade, htmlAttributes: new { @class = "control-label col-md-5" })
-                    <div class="col-md-4">
-                        @Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Quantidade, htmlAttributes: new { @class = "control-label col-md-5" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
                     </div>
-                    <div class="col-md-4"> </div>
-                </div>
- 
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
+                    <br />
 
-                <div class="form-actions no-color">
-                    <input type="submit" value="Delete" class="btn btn-default" /> |
-                    @Html.ActionLink("Voltar", "Index")
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <div class="col-md-5"> </div>
+                        <div class="col-md-1">
+                            <input type="submit" value="Deletar" class="btn btn-default" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.ActionLink("Voltar", "Index")
+                        </div>
+                        <div class="col-md-3"> </div>
+                    </div>
+                }
                 </div>
-            }
+            </div>
         </div>
-    </div>
-</div>
 </center>

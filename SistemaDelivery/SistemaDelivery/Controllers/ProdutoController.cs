@@ -30,7 +30,7 @@ namespace SistemaDelivery.Controllers
             {
                 Produto produto= gerenciador.Obter(id);
                 if (produto != null)
-                    return View(id);
+                    return View(produto);
             }
             return RedirectToAction("Index");
         }
