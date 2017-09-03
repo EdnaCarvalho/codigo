@@ -80,12 +80,11 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
-                if(ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
                     gerenciador.Editar(produto);
+                    return RedirectToAction("Index");
                 }
-                return RedirectToAction("Index");
-
             }
             catch
             {
@@ -115,7 +114,6 @@ namespace SistemaDelivery.Controllers
                     gerenciador.Remover(produto);
                     return RedirectToAction("Index");
                 }
-
             }
             catch
             {

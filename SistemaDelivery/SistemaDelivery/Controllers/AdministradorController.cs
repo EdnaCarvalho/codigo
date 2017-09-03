@@ -49,8 +49,7 @@ namespace SistemaDelivery.Controllers
                 {
                     gerenciador.Adicionar(administrador);
                     return RedirectToAction("ListagemUsuarios");
-                }
-               
+                }               
             }
             catch
             {
@@ -78,9 +77,9 @@ namespace SistemaDelivery.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    gerenciador.Editar(administrador);                   
+                    gerenciador.Editar(administrador);
+                    return RedirectToAction("Index");
                 }   
-                 return RedirectToAction("Index");
             }
             catch
             {                
@@ -88,7 +87,33 @@ namespace SistemaDelivery.Controllers
             return RedirectToAction("Index");
         }
 
-      
+
+        public ActionResult EditarUsuario(int? id)
+        {
+            if (id.HasValue)
+            {
+                Usuario administrador = gerenciador.Obter(id);
+                if (administrador != null)
+                    return View(administrador);
+            }
+            return RedirectToAction("ListagemUsuarios");
+        }
+
+        [HttpPost]
+        public ActionResult EditarUsuario(int id, Usuario administrador)
+        {
+            try
+            {
+                gerenciador.Editar(administrador);
+                return RedirectToAction("ListagemUsuarios");
+                
+            }
+            catch
+            {
+            }
+            return RedirectToAction("ListagemUsuarios");
+        }
+
         public ActionResult Delete(int? id)
         {
             if (id.HasValue)
