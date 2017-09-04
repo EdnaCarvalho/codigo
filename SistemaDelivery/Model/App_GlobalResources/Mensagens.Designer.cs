@@ -61,6 +61,15 @@ namespace Model.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O email é obrigatório..
+        /// </summary>
+        public static string EmailRequerido {
+            get {
+                return ResourceManager.GetString("EmailRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Login existente..
         /// </summary>
         public static string LoginExistente {
@@ -75,6 +84,33 @@ namespace Model.App_GlobalResources {
         public static string LoginRequerido {
             get {
                 return ResourceManager.GetString("LoginRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O nome completo é obrigatório..
+        /// </summary>
+        public static string NomeRequerido {
+            get {
+                return ResourceManager.GetString("NomeRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A senha e sua confirmação não são correspondentes..
+        /// </summary>
+        public static string SenhaDiferente {
+            get {
+                return ResourceManager.GetString("SenhaDiferente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A senha é obrigatória..
+        /// </summary>
+        public static string SenhaRequerida {
+            get {
+                return ResourceManager.GetString("SenhaRequerida", resourceCulture);
             }
         }
     }

@@ -19,3 +19,4 @@ D:\codigo\SistemaDelivery\Model\obj\Debug\Model.dll
 D:\codigo\SistemaDelivery\Model\obj\Debug\Model.pdb
 D:\codigo\SistemaDelivery\Model\obj\Debug\Model.App_GlobalResources.Mensagens.resources
 D:\codigo\SistemaDelivery\Model\obj\Debug\Model.csproj.GenerateResource.Cache
+D:\codigo\SistemaDelivery\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

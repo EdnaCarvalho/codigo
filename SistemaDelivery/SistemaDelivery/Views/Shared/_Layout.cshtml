@@ -28,8 +28,8 @@
                             DISTRIBUIDORAS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRADAS", "ListagemDistribuidoras", "Empresa")</p> <!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVA", "Create", "Empresa")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADAS", "ListagemDistribuidoras", "Empresa")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVA", "Create", "Empresa")</p>
                         </div>
                     </li>
 
@@ -38,7 +38,7 @@
                             USUARIOS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CLIENTES CADASTRADOS", "ListagemUsuarios", "Administrador")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "ListagemUsuarios", "Administrador")</p>
                             <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Create", "Administrador")</p>
                         </div>
                     </li>
@@ -48,7 +48,7 @@
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Administrador")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Administrador")</p>
                             <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Administrador")</p> 
                         </div>
                     </li>           
@@ -59,7 +59,7 @@
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Cliente")</p> <!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Cliente")</p> 
                             <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Cliente")</p>
                         </div>
                     </li>
@@ -71,8 +71,8 @@
                             PRODUTOS
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "Index", "Produto")</p><!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Create", "Produto")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRADOS", "Index", "Produto")</p>
+                            <p class="dropdown-item">@Html.ActionLink("CADASTRAR NOVO", "Create", "Produto")</p>
                         </div>
                     </li>
 
@@ -81,11 +81,10 @@
                             MEU PERFIL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Empresa")</p> <!--MUDAR-->
-                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Empresa")</p><!--MUDAR-->
+                            <p class="dropdown-item">@Html.ActionLink("ALTERAR SENHA", "AlterarSenha", "Empresa")</p>
+                            <p class="dropdown-item">@Html.ActionLink("EDITAR DADOS", "Edit", "Empresa")</p>
                         </div>
                     </li>
-
                     <!--TODOS-->
                     <li>@Html.ActionLink(" SAIR ", "Index", "Home")</li>
 
@@ -96,7 +95,6 @@
         </div>
     </div>
     <hr />
-    <!--<div class="container body-content ">-->
         @RenderBody()
         <hr />
     <div class="panel-footer">

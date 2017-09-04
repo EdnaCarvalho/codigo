@@ -117,10 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EmailRequerido" xml:space="preserve">
+    <value>O email é obrigatório.</value>
+  </data>
   <data name="LoginExistente" xml:space="preserve">
     <value>Login existente.</value>
   </data>
   <data name="LoginRequerido" xml:space="preserve">
     <value>O Login é obrigatório.</value>
+  </data>
+  <data name="NomeRequerido" xml:space="preserve">
+    <value>O nome completo é obrigatório.</value>
+  </data>
+  <data name="SenhaDiferente" xml:space="preserve">
+    <value>A senha e sua confirmação não são correspondentes.</value>
+  </data>
+  <data name="SenhaRequerida" xml:space="preserve">
+    <value>A senha é obrigatória.</value>
   </data>
 </root>

@@ -94,6 +94,7 @@ namespace Model.Models{
         [Required]
         [DataType(DataType.Password)]
         [Compare("Senha")]
+        [Display(Name = "Confirmar Senha")]
         public String ConfirmarSenha
         {
             get { return confirmarSenha; }

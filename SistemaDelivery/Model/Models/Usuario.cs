@@ -31,7 +31,7 @@ namespace Model.Models
             set { id = value; }
         }
 
-        [Required(ErrorMessage ="Campo Obrigatório")]
+        [Required(ErrorMessageResourceName = "NomeRequerido", ErrorMessageResourceType = typeof(Mensagens))]
         [StringLength(50, MinimumLength = 5)]
         [DataType(DataType.Text)]
         [Display(Name = "Nome Completo")]
@@ -41,7 +41,7 @@ namespace Model.Models
             set { nome = value; }
         }
 
-        [Required(ErrorMessage ="Campo Obrigatório")]
+        [Required(ErrorMessageResourceName = "EmailRequerido", ErrorMessageResourceType = typeof(Mensagens))]
         [StringLength(50, MinimumLength = 5)]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
@@ -62,7 +62,7 @@ namespace Model.Models
             set { telefone = value; }
         }
 
-        [Required(ErrorMessage = "Campo Obrigatório")]
+        [Required(ErrorMessageResourceName = "SenhaRequerida", ErrorMessageResourceType = typeof(Mensagens))]
         [StringLength(10, MinimumLength = 5)]
         [DataType(DataType.Password)]
         [RegularExpression(@"^[A-Za-z0-9_]+$")]
@@ -73,9 +73,10 @@ namespace Model.Models
             set { senha = value; }
         }
 
-        [Required]
+        [Required (ErrorMessageResourceName= "SenhaDiferente", ErrorMessageResourceType = typeof(Mensagens))]
         [DataType(DataType.Password)]
         [Compare("Senha")]
+        [Display(Name = "Confirmar Senha")]
         public  string ConfirmarSenha
         {
             get { return confirmarSenha; }
