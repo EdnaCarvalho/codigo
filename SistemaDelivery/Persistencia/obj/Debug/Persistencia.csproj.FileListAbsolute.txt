@@ -5,13 +5,6 @@ C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDel
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Persistencia\obj\Debug\Persistencia.pdb
-D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.dll
-D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.pdb
-D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.dll
-D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.pdb
-D:\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
-D:\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.dll
-D:\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.pdb
 C:\PROJETO\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.dll
 C:\PROJETO\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.pdb
 C:\PROJETO\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.dll
@@ -26,3 +19,10 @@ C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\bin\Debu
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.pdb
+D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.dll
+D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Persistencia.pdb
+D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.dll
+D:\codigo\SistemaDelivery\Persistencia\bin\Debug\Model.pdb
+D:\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+D:\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.dll
+D:\codigo\SistemaDelivery\Persistencia\obj\Debug\Persistencia.pdb

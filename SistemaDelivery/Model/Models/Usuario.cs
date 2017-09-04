@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Model.App_GlobalResources;
 
 namespace Model.Models
 {
@@ -62,7 +63,7 @@ namespace Model.Models
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [StringLength(15, MinimumLength = 5)]
+        [StringLength(10, MinimumLength = 5)]
         [DataType(DataType.Password)]
         [RegularExpression(@"^[A-Za-z0-9_]+$")]
         [Display(Name = "Senha")]
@@ -88,7 +89,7 @@ namespace Model.Models
             set { endereco = value; }
         }
 
-        [Required(ErrorMessage = "Campo Obrigatório")]
+        [Required(ErrorMessageResourceName= "LoginRequerido", ErrorMessageResourceType = typeof(Mensagens))]
         [StringLength(20, MinimumLength = 5)]
         public string Login
         {

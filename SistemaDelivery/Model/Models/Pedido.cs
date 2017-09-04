@@ -30,8 +30,7 @@ namespace Model.Models
             get { return id; }
             set { id = value; }
         }
-
-        [Required]
+        
         public Empresa Empresa
         {
             get { return empresa; }
@@ -44,15 +43,13 @@ namespace Model.Models
             get { return status; }
             set { status = value; }
         }
-
-        [Required]
+        
         public Usuario Cliente
         {
             get { return cliente; }
             set { cliente = value; }
         }
-
-        [Required]
+        
         public List<Produto> Produtos
         {
             get { return produtos; }

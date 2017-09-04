@@ -7,15 +7,6 @@ C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDel
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Negocio\obj\Debug\Negocio.dll
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Negocio\obj\Debug\Negocio.pdb
-D:\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.dll
-D:\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.pdb
-D:\codigo\SistemaDelivery\Negocio\bin\Debug\Model.dll
-D:\codigo\SistemaDelivery\Negocio\bin\Debug\Persistencia.dll
-D:\codigo\SistemaDelivery\Negocio\bin\Debug\Model.pdb
-D:\codigo\SistemaDelivery\Negocio\bin\Debug\Persistencia.pdb
-D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
-D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.dll
-D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.pdb
 C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.dll
 C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.pdb
 C:\PROJETO\codigo\SistemaDelivery\Negocio\bin\Debug\Model.dll
@@ -34,3 +25,12 @@ C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Negocio\bin\Debug\Per
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.dll
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.pdb
+D:\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.dll
+D:\codigo\SistemaDelivery\Negocio\bin\Debug\Negocio.pdb
+D:\codigo\SistemaDelivery\Negocio\bin\Debug\Model.dll
+D:\codigo\SistemaDelivery\Negocio\bin\Debug\Persistencia.dll
+D:\codigo\SistemaDelivery\Negocio\bin\Debug\Model.pdb
+D:\codigo\SistemaDelivery\Negocio\bin\Debug\Persistencia.pdb
+D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.dll
+D:\codigo\SistemaDelivery\Negocio\obj\Debug\Negocio.pdb

@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -57,7 +56,6 @@ namespace Model.Models{
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [StringLength(20, MinimumLength = 5)]
         public string Status
         {
             get { return status; }
@@ -65,7 +63,7 @@ namespace Model.Models{
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [StringLength(20, MinimumLength = 5)]
+        [StringLength(15, MinimumLength = 5)]
         public string Cpf
         {
             get { return cpf; }
@@ -83,7 +81,7 @@ namespace Model.Models{
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [StringLength(15, MinimumLength = 5)]
+        [StringLength(10, MinimumLength = 5)]
         [DataType(DataType.Password)]
         [RegularExpression(@"^[A-Za-z0-9_]+$")]
         [Display(Name = "Senha")]
@@ -110,7 +108,7 @@ namespace Model.Models{
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [StringLength(20, MinimumLength = 5)]
+        [StringLength(50, MinimumLength = 5)]
         public string Cnpj
         {
             get { return cnpj; }
@@ -127,7 +125,7 @@ namespace Model.Models{
         }
 
         [Required]
-        [StringLength(10, MinimumLength = 5)]
+        [StringLength(20, MinimumLength = 5)]
         public string Login
         {
             get { return login; }

@@ -3,11 +3,6 @@ C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDel
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Model\bin\Debug\Model.pdb
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Model\obj\Debug\Model.dll
 C:\Users\Layla\Documents\Projeto delivery\projeto-delivery\10.Código\SistemaDelivery\Model\obj\Debug\Model.pdb
-D:\codigo\SistemaDelivery\Model\bin\Debug\Model.dll
-D:\codigo\SistemaDelivery\Model\bin\Debug\Model.pdb
-D:\codigo\SistemaDelivery\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
-D:\codigo\SistemaDelivery\Model\obj\Debug\Model.dll
-D:\codigo\SistemaDelivery\Model\obj\Debug\Model.pdb
 C:\PROJETO\codigo\SistemaDelivery\Model\bin\Debug\Model.dll
 C:\PROJETO\codigo\SistemaDelivery\Model\bin\Debug\Model.pdb
 C:\PROJETO\codigo\SistemaDelivery\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
@@ -18,3 +13,9 @@ C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Model\bin\Debug\Model
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Model\obj\Debug\Model.dll
 C:\Users\Layla\Documents\codigoNovo\codigo\SistemaDelivery\Model\obj\Debug\Model.pdb
+D:\codigo\SistemaDelivery\Model\bin\Debug\Model.dll
+D:\codigo\SistemaDelivery\Model\bin\Debug\Model.pdb
+D:\codigo\SistemaDelivery\Model\obj\Debug\Model.dll
+D:\codigo\SistemaDelivery\Model\obj\Debug\Model.pdb
+D:\codigo\SistemaDelivery\Model\obj\Debug\Model.App_GlobalResources.Mensagens.resources
+D:\codigo\SistemaDelivery\Model\obj\Debug\Model.csproj.GenerateResource.Cache

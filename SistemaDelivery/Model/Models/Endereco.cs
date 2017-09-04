@@ -59,6 +59,7 @@ namespace Model.Models
         [Required(ErrorMessage = "Campo Obrigatorio")]
         [StringLength(2)]
         [DataType(DataType.Text)]
+        [RegularExpression(@"^[A-Za-z]+$")]
         [Display(Name = "UF")]
         public string Estado
         {
