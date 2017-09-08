@@ -7,13 +7,13 @@ namespace SistemaDelivery.Util
 
     public static class SessionHelper
     {
-        public static Object Get(SessionKeys chave)
+        public static object Get(SessionKeys chave)
         {
             String chaveString = Enum.GetName(typeof(SessionKeys),chave);
             return HttpContext.Current.Session[chaveString];
         }
 
-        public static Object Set(SessionKeys chave,Object valor)
+        public static object Set(SessionKeys chave, object valor)
         {
             String chaveString = Enum.GetName(typeof(SessionKeys), chave);
             return HttpContext.Current.Session[chaveString] = valor;

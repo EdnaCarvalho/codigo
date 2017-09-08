@@ -111,7 +111,7 @@
                         <div class="col-md-7"> </div>
                     </div>
 
-                        @if (true)
+                        @if (false) //Se é a empresa atualizando os dados
                         {
                         <div class="form-group">
                             <div class="col-md-4"> </div>
@@ -119,7 +119,7 @@
                                 <input type="submit" value="Salvar" class="btn btn-default" />
                             </div>
                             <div class="col-md-2">
-                                @Html.ActionLink("Cancelar", "Index")
+                                @Html.ActionLink("Cancelar", "Index", new { Controller = "Empresa" }, new { @class = "btn btn-default" })
                             </div>
                             <div class="col-md-4"> </div>
                         </div>
@@ -127,10 +127,10 @@
                         <div class="form-group">
                             <div class="col-md-4"> </div>
                             <div class="col-md-2">
-                                 @Html.ActionLink("Salvar", "ListagemDistribuidoras")
+                                 @Html.ActionLink("Salvar", "ListagemDistribuidoras", new { Controller = "Empresa" }, new { @class = "btn btn-default" })
                             </div>
                             <div class="col-md-2">
-                                @Html.ActionLink("Cancelar", "ListagemDistribuidoras")
+                                @Html.ActionLink("Cancelar", "ListagemDistribuidoras", new { Controller = "Empresa" }, new { @class = "btn btn-default" })
                             </div>
                             <div class="col-md-4"> </div>
                         </div>

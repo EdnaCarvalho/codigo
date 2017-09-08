@@ -72,10 +72,11 @@ namespace Model.Models{
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(50, MinimumLength = 5)]
+        [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string Email
-        {
+        {           
             get { return email; }
             set { email = value; }
         }

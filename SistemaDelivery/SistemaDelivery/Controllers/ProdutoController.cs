@@ -2,17 +2,18 @@
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+using SistemaDelivery.Util;
 
 namespace SistemaDelivery.Controllers
 {
     public class ProdutoController : Controller
     {
         private GerenciadorProduto gerenciador;
-        private Empresa empresa; //TODO: Utilizar pela sessão.
+        private Empresa empresa = (Empresa) SessionHelper.Set(SessionKeys.Empresa, new Empresa() { Id = 1 }); //TODO: Remover quando implementar autenticação.
 
         public ProdutoController()
         {
-            empresa = new Empresa() { Id = 1 };
+            empresa = (Empresa) SessionHelper.Get(SessionKeys.Empresa);
             gerenciador = new GerenciadorProduto();
         }
 
