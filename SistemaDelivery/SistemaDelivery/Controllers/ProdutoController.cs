@@ -9,11 +9,11 @@ namespace SistemaDelivery.Controllers
     public class ProdutoController : Controller
     {
         private GerenciadorProduto gerenciador;
-        private Empresa empresa = (Empresa) SessionHelper.Set(SessionKeys.Empresa, new Empresa() { Id = 1 }); //TODO: Remover quando implementar autenticação.
+        private Empresa empresa = (Empresa)SessionHelper.Set(SessionKeys.Empresa, new Empresa() { Id = 1 }); //TODO: Remover quando implementar autenticação.
 
         public ProdutoController()
         {
-            empresa = (Empresa) SessionHelper.Get(SessionKeys.Empresa);
+            empresa = (Empresa)SessionHelper.Get(SessionKeys.Empresa);
             gerenciador = new GerenciadorProduto();
         }
 
@@ -29,7 +29,7 @@ namespace SistemaDelivery.Controllers
         {
             if (id.HasValue)
             {
-                Produto produto= gerenciador.Obter(id);
+                Produto produto = gerenciador.Obter(id);
                 if (produto != null)
                     return View(produto);
             }
@@ -60,7 +60,7 @@ namespace SistemaDelivery.Controllers
             }
             catch
             {
-               
+
             }
             return View();
         }
@@ -75,7 +75,7 @@ namespace SistemaDelivery.Controllers
             }
             return RedirectToAction("Index");
         }
-        
+
         [HttpPost]
         public ActionResult Edit(int? id, Produto produto)
         {
@@ -89,11 +89,11 @@ namespace SistemaDelivery.Controllers
             }
             catch
             {
-                
+
             }
             return RedirectToAction("Index");
         }
-        
+
         public ActionResult Delete(int? id)
         {
             if (id.HasValue)
@@ -106,15 +106,14 @@ namespace SistemaDelivery.Controllers
         }
 
         [HttpPost]
-        public ActionResult Delete(int? id, Produto produto) 
+        public ActionResult Delete(int? id, Produto produto)
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    gerenciador.Remover(produto);
-                    return RedirectToAction("Index");
-                }
+
+                gerenciador.Remover(produto);
+                return RedirectToAction("Index");
+
             }
             catch
             {
