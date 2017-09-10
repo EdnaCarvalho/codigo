@@ -77,10 +77,11 @@ namespace SistemaDelivery.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(int? id, Produto produto)
+        public ActionResult Edit(int id, Produto produto)
         {
             try
             {
+                produto.Empresa = empresa;
                 if (ModelState.IsValid)
                 {
                     gerenciador.Editar(produto);
@@ -106,11 +107,10 @@ namespace SistemaDelivery.Controllers
         }
 
         [HttpPost]
-        public ActionResult Delete(int? id, Produto produto)
+        public ActionResult Delete(int id, Produto produto)
         {
             try
             {
-
                 gerenciador.Remover(produto);
                 return RedirectToAction("Index");
 

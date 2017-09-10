@@ -64,12 +64,15 @@ namespace SistemaDelivery.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(int? id, Empresa empresa)
+        public ActionResult Edit(int id, Empresa empresa)
         {
             try
             {
-                gerenciador.Editar(empresa);  
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Editar(empresa);
+                    return RedirectToAction("Index");
+                }
             }
             catch
             {

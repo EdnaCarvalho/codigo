@@ -16,6 +16,7 @@
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     @Html.HiddenFor(model => model.Id)
                     @Html.HiddenFor(model => model.Senha)
+                    @Html.HiddenFor(model => model.ConfirmarSenha)
 
                     <div class="form-group">
                         @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -111,34 +112,20 @@
                         <div class="col-md-7"> </div>
                     </div>
 
-                        @if (false) //Se é a empresa atualizando os dados
-                        {
-                        <div class="form-group">
-                            <div class="col-md-4"> </div>
-                            <div class="col-md-2">
-                                <input type="submit" value="Salvar" class="btn btn-default" />
-                            </div>
-                            <div class="col-md-2">
-                                @Html.ActionLink("Cancelar", "Index", new { Controller = "Empresa" }, new { @class = "btn btn-default" })
-                            </div>
-                            <div class="col-md-4"> </div>
+                    <div class="form-group">
+                        <div class="col-md-4"> </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Salvar" class="btn btn-default" />
                         </div>
-                        }else{   //se for administrador que estiver editando                 
-                        <div class="form-group">
-                            <div class="col-md-4"> </div>
-                            <div class="col-md-2">
-                                 @Html.ActionLink("Salvar", "ListagemDistribuidoras", new { Controller = "Empresa" }, new { @class = "btn btn-default" })
-                            </div>
-                            <div class="col-md-2">
-                                @Html.ActionLink("Cancelar", "ListagemDistribuidoras", new { Controller = "Empresa" }, new { @class = "btn btn-default" })
-                            </div>
-                            <div class="col-md-4"> </div>
+                        <div class="col-md-2">
+                            @Html.ActionLink("Cancelar", "Index", new { Controller = "Empresa" }, new { @class = "btn btn-default" })
                         </div>
-                        }
+                        <div class="col-md-4"> </div>
+                    </div>
 
-                     </div>
-                </div>
+                    </div>
             </div>
+        </div>
     </center>
 }
 

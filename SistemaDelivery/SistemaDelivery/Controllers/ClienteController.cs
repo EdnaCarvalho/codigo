@@ -72,8 +72,11 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
-                gerenciador.Editar(cliente);                
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Editar(cliente);
+                    return RedirectToAction("Index");
+                }
             }
             catch
             {

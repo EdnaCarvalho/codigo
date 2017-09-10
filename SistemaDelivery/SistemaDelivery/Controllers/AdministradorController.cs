@@ -104,9 +104,11 @@ namespace SistemaDelivery.Controllers
         {
             try
             {
-                gerenciador.Editar(administrador);
-                return RedirectToAction("ListagemUsuarios");
-                
+                if (ModelState.IsValid)
+                {
+                    gerenciador.Editar(administrador);
+                    return RedirectToAction("ListagemUsuarios");
+                }
             }
             catch
             {
@@ -132,7 +134,7 @@ namespace SistemaDelivery.Controllers
             try
             {
                 gerenciador.Remover(administrador);
-                return RedirectToAction("ListagemUsuarios");            
+                return RedirectToAction("ListagemUsuarios");                
             }
             catch
             {
